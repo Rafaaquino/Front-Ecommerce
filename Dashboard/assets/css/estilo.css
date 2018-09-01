@@ -55,6 +55,7 @@
 .menu-esquerdo{
   margin-left: 0px !important;
   padding-left: 0px !important; 
+
 }
 
 a{
@@ -107,17 +108,18 @@ i{
   vertical-align: middle;
   float: right;
 }
-.nav-side-menu ul .active,
-.nav-side-menu li .active {
+.nav-side-menu ul .ativa,
+.nav-side-menu li .ativa {
   border-left: 6px solid #d19b3d;
   background-color: #4f5b69;
+  padding-left: 60px;
 }
-.nav-side-menu ul .sub-menu li.active,
-.nav-side-menu li .sub-menu li.active {
+.nav-side-menu ul .sub-menu li.ativa,
+.nav-side-menu li .sub-menu li.ativa {
   color: #d19b3d;
 }
-.nav-side-menu ul .sub-menu li.active a,
-.nav-side-menu li .sub-menu li.active a {
+.nav-side-menu ul .sub-menu li.ativa a,
+.nav-side-menu li .sub-menu li.ativa a {
   color: #d19b3d;
 }
 .nav-side-menu ul .sub-menu li,
@@ -134,11 +136,10 @@ i{
 }
 .nav-side-menu ul .sub-menu li:before,
 .nav-side-menu li .sub-menu li:before {
-  font-family: FontAwesome;
-  content: "\f105";
+  
   display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
   vertical-align: middle;
 }
 .nav-side-menu li {
@@ -199,12 +200,16 @@ i{
     display: block;
   }
 }
+
 body {
   margin: 0px;
   padding: 0px;
 }
 
-
+.left{
+  padding-top: 10px;
+  padding-left: 25 px;
+}
 /**/
 
 .bg-container{
