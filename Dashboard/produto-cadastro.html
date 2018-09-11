@@ -83,7 +83,7 @@
         
                   <ul id="menu-content" class="menu-content collapse out">
                       <li  data-toggle="collapse" data-target="#painel" class="collapsed">
-                        <a href="#"><i class="fas fa-tachometer-alt"></i> Painel </a>
+                        <a href="index.html"><i class="fas fa-tachometer-alt"></i> Painel </a>
                       </li>
                       
 
@@ -100,7 +100,7 @@
                         <a href="#"><i class="fas fa-box-open"></i> Produtos <span class="arrow"></span></a>
                       </li>  
                       <ul class="sub-menu collapse" id="produtos">
-                        <li class="ativa"><a href="#">Cadastrar</a></li>
+                        <li class="ativa"><a href="produto-cadastro.html">Cadastrar</a></li>
                           <li class="ativa"><a href="#">Administrar</a></li>
                       </ul>
 
@@ -142,7 +142,7 @@
   		    
           <div class="container  top">
             <div class="row">
-              <h1 class=""> Cadastrar Clientes</h1>
+              <h1 class=""> Cadastrar Produtos</h1>
             </div>
 
             <div class="row">
@@ -157,31 +157,25 @@
                               <div class="d-flex justify-content-center">
                                   <div class="custom-file">
                                       <input type="file" class="custom-file-input" id="customFile">
-                                      <label class="custom-file-label" for="customFile">Upload</label>
+                                      <label class="custom-file-label" for="customFile">Carregar imagem</label>
                                     </div>
                               </div>
                           </div>
                         </div>
                         <div class="col-sm-8">
-                                  <div class="row">
-                            <div class="col-sm-6">
+                          <div class="row">
+                            <div class="col-sm-12">
                               <div class="form-group">
                                 <label for="nome-produto">Nome Produto </span></label>
                                 <input type="text" class="form-control" name="nome-produto" required>
                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-group">
-                                <label for="categoria">Categoria</span></label>
-                                <input type="text" class="form-control" name="categoria" required>
-                              </div>
-                            </div>
+                            </div>                            
                           </div>
                           <div class="row">
                             <div class="col-sm-6">
                               <div class="form-group">
-                                <label for="qtd">Quantidade</label>
-                                <input type="number" class="form-control" name="qtd">
+                                <label for="categoria">Categoria</span></label>
+                                <input type="text" class="form-control" name="categoria" required>
                               </div>
                             </div>
                             <div class="col-sm-6">
@@ -191,28 +185,51 @@
                               </div>
                             </div>
                           </div>
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">$</span>
+                          <hr style="margin-top: 2px;">
+                          <div class="row">
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="qtd">Quantidade</label>
+                                <input type="number" class="form-control" name="qtd" required>
+                              </div>
                             </div>
-                            <input type="text" class="form-control" >
-                            <div class="input-group-append">
-                              <span class="input-group-text">.00</span>
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                                <label for="codigo">Codigo</label>
+                                <input type="text" class="form-control" name="codigo" required>
+                              </div>
                             </div>
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="medida">Medida</label>
+                                <input type="text" class="form-control" name="medida">
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="valor">Valor</label>
+                                <input type="text" class="form-control" name="valor" required>
+                              </div>
+                            </div>                            
                           </div>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">Descrição</span>
-                            </div>
-                            <textarea class="form-control" aria-label="descricao"></textarea>
-                          </div>
-                          <div class="form-group">
-                            <hr>
-                            <div class="text-right"> 
-                              <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                          </div>
+                          
+                          
                         </div>
+                    </div>
+                    <div class="row padding-2">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Descrição</span>
+                        </div>
+                        <textarea class="form-control" aria-label="descricao" rows="5"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <hr>
+                        <div class="text-left"> 
+                          <button type="submit" class="btn btn-primary">Cadastrar</button>
+                           <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>                            
+                      </div> 
                     </div>
                 </form>
 

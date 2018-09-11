@@ -247,8 +247,18 @@ body {
 
 
 
-
+/* PAGINA PRODUTOS*/
 
 .avatar-pic {
   width: 150px;
+}
+
+
+.padding-2{
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.custom-file-label{
+  text-align: left;
 }
