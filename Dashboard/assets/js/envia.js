@@ -1,37 +1,67 @@
-function enviarDados(){
-	var nome = document.getElementById('nome').value;
-	var email = document.getElementById('email').value;
-	var senha = document.getElementById('senha').value;
-	var data = document.getElementById('data').value;
-	var sexo = document.getElementById('sexo').value;
-	var cpf = document.getElementById('cpf').value;
-	var telefone = document.getElementById('telefone').value;
-	var celular = document.getElementById('celular').value;
-	var endereco = document.getElementById('endereco').value;
-	var numero = document.getElementById('numero').value;
-	var cidade = document.getElementById('cidade').value;
-	var bairro = document.getElementById('bairro').value;
-	var estado = document.getElementById('estado').value;
-	var cep = document.getElementById('cep').value;
-
+var enviarDados = function() {
+	var data = JSON.parse(
+				  '{"'+
+				  'nome":"'+ document.getElementById('nome').value + 
+				  '", "'+
+				  'email":"' + document.getElementById('email').value + 
+				  '", "' +
+				  'senha":"' + document.getElementById('senha').value + 
+				  '", "' +
+				  'data":"' + document.getElementById('data').value + 
+				  '", "' +
+				  'sexo":"' + document.getElementById('sexo').value + 
+				  '", "' +
+				  'cpf":"' + document.getElementById('cpf').value + 
+				  '", "' +
+				  'telefone":"' + document.getElementById('telefone').value + 
+				  '", "' +
+				  'celular":"' + document.getElementById('celular').value + 
+				  '", "' +
+				  'endereco":"' + document.getElementById('endereco').value + 
+				  '", "' +
+				  'numero":"' + document.getElementById('numero').value + 
+				  '", "' +
+				  'cidade":"' + document.getElementById('cidade').value + 
+				  '", "' +
+				  'bairro":"' + document.getElementById('bairro').value + 
+				  '", "' +
+				  'estado":"' + document.getElementById('estado').value + 
+				  '", "' +
+				  'cep":"' + document.getElementById('cep').value + 
+				  '"}'
+			  );
 		    
-	    alert(nome);
-};
+			
+	var XHR = new XMLHttpRequest();
+	var dadosSerializados = "";
+	var arrayData = [];
+	var name;
+
+	// criar um array de pares chave/valor
+	for(name in data) {
+	arrayData.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+	}
+
+	// Combine the pairs into a single string and replace all %-encoded spaces to 
+	// the '+' character; matches the behaviour of browser form submissions.
+	dadosSerializados = arrayData.join('&').replace(/%20/g, '+');
 
 
+	XHR.addEventListener('load', function(event) {
+		alert('Dados Enviados!');
+	});
+	XHR.addEventListener('error', function(event) {
+		alert('Deu ruim!');
+	});
 
+	XHR.open('POST', 'https://mandanode.herokuapp.com/mandanode/user/create');
 
-xhr = new XMLHttpRequest ();  
-var url = "https://mandanode.herokuapp.com/mandanode/product/create" ; 
-xhr . aberto ( "POST" , url , true ); 
-xhr . setRequestHeader ( "Content-type" , "application / json" ); 
-xhr . onreadystatechange = function () {    
-    se ( XHR . readyState == 4 && xhr . estatuto == 200 ) {     
-        var json = JSON . parse ( xhr . responseText );
-        console . log ( json . email + "," + json . name )  
-    }
+	// header HTTP para dados de formulário POST
+	XHR.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+	// Finally, send our data.
+	XHR.send(dadosSerializados);
 }
-var data = JSON . stringify ({ "email" : "tomb@raider.com" , "nome" : "LaraCroft" });
-xhr . enviar ( dados );
+
 
 
