@@ -5,6 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
 
   <title>DASHBOARD ECOMMERCE</title>
 
@@ -93,7 +94,7 @@
                       </li>
                       <ul class="sub-menu collapse" id="clientes">
                           <li class="ativa"><a href="clientes-cadastro.html">Cadastrar</a></li>
-                          <li class="ativa"><a href="clientes-lista.html">Administrar</a></li>                 
+                          <li class="ativa"><a href="clientes-lista.html">Administrar</a></li>                   
                       </ul>
 
 
@@ -102,7 +103,7 @@
                       </li>  
                       <ul class="sub-menu collapse" id="produtos">
                         <li class="ativa"><a href="produto-cadastro.html">Cadastrar</a></li>
-                          <li class="ativa"><a href="#">Administrar</a></li>
+                          <li class="ativa"><a href="produto-lista.html">Administrar</a></li>
                       </ul>
 
 
@@ -110,16 +111,16 @@
                         <a href="#"><i class="fas fa-shopping-cart"></i>Vendas <span class="arrow"></span></a>
                       </li>
                       <ul class="sub-menu collapse" id="vendas">
-                        <li class="ativa"><a href="#">Pedidos</a></li>
-                          <li class="ativa"><a href="#">Relatório</a></li>
+                        <li class="ativa"><a href="vendas-pedidos.html">Pedidos</a></li>
+                          <li class="ativa"><a href="vendas-relatorio.html">Relatório</a></li>
                       </ul>
 
                       <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
                         <a href="#"><i class="fa fa-user"></i>Usuarios <span class="arrow"></span></a>
                       </li>
                       <ul class="sub-menu collapse" id="usuarios">
-                        <li class="ativa"><a href="#">Cadastrar</a></li>
-                          <li class="ativa"><a href="#">Administrar</a></li>
+                        <li class="ativa"><a href="usuario-cadastro.html">Cadastrar</a></li>
+                          <li class="ativa"><a href="usuario-lista.html">Administrar</a></li>
                       </ul>
 
 
@@ -132,7 +133,7 @@
                         <li class="ativa"><a href="#">....</a></li>
                           <li class="ativa"><a href="#">....</a></li>
                       </ul>
-                  </ul>     
+                  </ul>        
                 </div>
           </nav><!-- FIM MENU LATERAL ESQUERDO-->
       
@@ -152,16 +153,16 @@
                   <form action="" method="post">
                     <div class="form-group">
                       <label for="nome">Nome</label>
-                      <input value="Rafael" type="text" class="form-control" id="nome" placeholder="Nome" required>
+                      <input  type="text" class="form-control" id="nome" placeholder="Nome" maxlength="50" required>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="Email">Email</label>
-                        <input value="rafael@aquino.com" type="email" class="form-control" id="email" placeholder="Email" required>
+                        <input  type="email" class="form-control" id="email" placeholder="Email" maxlength="50" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="senha">Senha</label>
-                        <input value="senhaaberta!!!" type="password" class="form-control" id="senha" placeholder="Senha" required>
+                        <input  type="password" class="form-control" id="senha" placeholder="Senha" maxlength="18" required>
                       </div>
                     </div>
                     <div class="form-row">
@@ -172,39 +173,39 @@
                       <div class="form-group col-md-3">
                         <label for="sexo">Sexo</label>
                         <select id="sexo" class="form-control" required>
-                          <option value="" >Escolha...</option>
-                          <option value="m" selected >Masculino</option>
+                          <option selected>Escolha...</option>
+                          <option value="m" >Masculino</option>
                           <option value="f" >Feminino</option>                          
                         </select>
                       </div>
                       <div class="form-group col-md-4">
                         <label for="cpf">CPF</label>
-                        <input value="123.456.789-09" type="text" class="form-control" id="cpf" required>
+                        <input  type="text" class="form-control" id="cpf" maxlength="15" required>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="Telefone">Telefone</label>
-                        <input value="(11) 9999-9999" type="tel" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx" required>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx" maxlength="10" required>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="Celular">Celular</label>
-                        <input value="(11) 9999-9999" type="tel" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" required>
+                        <input type="tel" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="endereco">Endereço</label>
-                          <input value="Rua do Rafael" type="text" class="form-control" id="endereco" placeholder="Endereço" required>
+                          <input  type="text" class="form-control" id="endereco" placeholder="Endereço" maxlength="50" required>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="bairro">Bairro</label>
-                          <input value="Bairro do Rafael" type="text" class="form-control" id="bairro" placeholder="Bairro" required>
+                          <input  type="text" class="form-control" id="bairro" placeholder="Bairro" maxlength="50" required>
                         </div>
                         <div class="form-group col-md-2">
                           <label for="numero">Nº</label>
-                          <input value="Número da Rua do Rafael" type="text" class="form-control" id="numero" required>
+                          <input  type="text" class="form-control" id="numero" maxlength="10" required>
                         </div>
                       </div>
                     </div>
@@ -212,7 +213,7 @@
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="endereco2">Endereço 2</label>
-                          <input type="text" class="form-control" id="endereco2" placeholder="Endereço 2" >
+                          <input type="text" class="form-control" id="endereco2"  placeholder="Endereço 2" >
                         </div>
                         <div class="form-group col-md-4">
                           <label for="bairro2">Bairro</label>
@@ -227,7 +228,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade">
+                        <input type="text" class="form-control" id="cidade" maxlength="20" required>
                       </div>
                       <div class="form-group col-md-3">
                         <label for="estado">Estado</label>
@@ -263,11 +264,11 @@
                       </div>
                       <div class="form-group col-md-3">
                         <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="cep" required>
+                        <input type="text" class="form-control" id="cep" maxlength="10" required>
                       </div>
                     </div>
                     
-                    <button type="submit" onclick="teste()"  class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" onclick="enviarDados(event)"  class="btn btn-primary">Cadastrar</button>
                     <button type="reset" class="btn btn-danger">Limpar</button>
                   </form>
 
