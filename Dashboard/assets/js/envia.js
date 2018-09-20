@@ -134,3 +134,58 @@ var product = '{"'+
 
 
 
+var enviarUser = function(ev) {
+ev.preventDefault();
+
+var user = '{"'+ 
+				  'name":"' + document.getElementById('nome').value + 
+				  '", "' +
+				  'email":"' + document.getElementById('email').value + 
+				  '", "' +
+				  'password":"' + document.getElementById('senha').value + 
+				  '", "' +
+				  'dateBirth":"' + document.getElementById('data').value + 
+				  '", "' +
+				  'sex":"' + document.getElementById('sexo').value + 
+				  '", "' +
+				  'cpf":"' + document.getElementById('cpf').value + 
+				  '", "' +
+				  'phone":"' + document.getElementById('celular').value + 
+				  '"}';
+
+				 				  
+
+	var data = JSON.parse(user);
+		    
+			
+	var XHR = new XMLHttpRequest();
+	//var dadosSerializados = "";
+	//var arrayData = [];
+	//var name;
+
+	// criar um array de pares chave/valor
+	//for(name in data) {
+	//arrayData.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+	//}
+
+	// Combine the pairs into a single string and replace all %-encoded spaces to 
+	// the '+' character; matches the behaviour of browser form submissions.
+	//dadosSerializados = arrayData.join('&').replace(/%20/g, '+');
+
+
+	XHR.addEventListener('load', function(event) {
+		alert('Dados Enviados!');
+	});
+	XHR.addEventListener('error', function(event) {
+		alert('Deu ruim!');
+	});
+
+	XHR.open('POST', 'http://mandanode.herokuapp.com/mandanode/user/create');
+
+	// header HTTP para dados de formulário POST
+	XHR.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+	// Finally, send our data.
+	XHR.send(user);
+}
+

@@ -152,26 +152,26 @@
                   
                   <form action="" method="post">
                     <div class="form-group">
-                      <label for="nome">Nome</label>
+                      <label for="nome">Nome*</label>
                       <input  type="text" class="form-control" id="nome" placeholder="Nome" maxlength="50" required>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="Email">Email</label>
+                        <label for="Email">Email*</label>
                         <input  type="email" class="form-control" id="email" placeholder="Email" maxlength="50" required>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="senha">Senha</label>
+                        <label for="senha">Senha*</label>
                         <input  type="password" class="form-control" id="senha" placeholder="Senha" maxlength="18" required>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-5">
-                        <label for="data">Data Nascimento</label>
-                        <input value="1990-01-01" type="date" class="form-control" id="data" required>
+                        <label for="data">Data Nascimento*</label>
+                        <input type="date" class="form-control" id="data" required>
                       </div>
                       <div class="form-group col-md-3">
-                        <label for="sexo">Sexo</label>
+                        <label for="sexo">Sexo*</label>
                         <select id="sexo" class="form-control" required>
                           <option selected>Escolha...</option>
                           <option value="m" >Masculino</option>
@@ -179,22 +179,22 @@
                         </select>
                       </div>
                       <div class="form-group col-md-4">
-                        <label for="cpf">CPF</label>
+                        <label for="cpf">CPF*</label>
                         <input  type="text" class="form-control" id="cpf" maxlength="15" required>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="Telefone">Telefone</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx" maxlength="10" required>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx" maxlength="10" >
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="Celular">Celular</label>
+                        <label for="Celular">Celular*</label>
                         <input type="tel" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
                       </div>
                     </div>
                   
-                    <button type="submit" onclick="enviarDados(event)"  class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" onclick="enviarUser(event)"  class="btn btn-primary">Cadastrar</button>
                     <button type="reset" class="btn btn-danger">Limpar</button>
                   </form>
 
@@ -203,6 +203,55 @@
             
 
           </div>
+
+          <div class="text-center">
+            <!-- Botao  HTML (to Trigger Modal) -->
+            <a href="#modalErro" class="trigger-btn" data-toggle="modal">Modal Erro</a>
+          </div>
+          <!-- MODAL ERRO -->
+          <div id="modalErro" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modalErro" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                  <h4>Ooops!</h4> 
+                  <p>Algo de Errado aconteceu .</p>
+                  <button class="btn btn-success" data-dismiss="modalErro">Tentar novamente</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- MODAL ERRO -->
+
+          <!-- MODAL SUCESSO -->
+
+          <div class="text-center">
+            <!-- Botao HTML (to Trigger Modal) -->
+            <a href="#modalSucesso" class="trigger-btn" data-toggle="modal">Modal Sucesso</a>
+          </div>
+
+          <div id="modalSucesso" class="modal fade">
+              <div class="modal-dialog modal-confirme">
+                <div class="modal-contente">
+                  <div class="modal-headere">
+                    <div class="icon-box">
+                      <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <h4>Sucesso!</h4> 
+                    <p>Sua conta foi criada com sucesso.</p>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+          <!-- MODAL ERRO -->
 
 
        
