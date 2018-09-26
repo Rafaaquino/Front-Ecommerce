@@ -4,6 +4,23 @@
   background: #f6f6f6;
 }
 
+.bg-menu{
+	background: #fff;
+}
+
+.bg-submenu{
+  background: #1e2328;
+}
+
+.nav-link, i.carrinho{
+	color: #000!important;
+}
+
+.icone-submenu{
+	float: right;
+	padding-left: 15px;
+}
+
 a{
   
 }
@@ -14,4 +31,12 @@ a:hover{
 
 .menu{
   height: 95px;
+}
+
+i{
+	color: #fff;
+}
+
+i:hover{
+	color: #f9f9f9;
 }
