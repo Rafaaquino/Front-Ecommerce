@@ -136,6 +136,7 @@ var product = '{"'+
 
 var enviarUser = function(ev) {
 ev.preventDefault();
+$('#modalSucesso').modal('toggle');
 
 var user = '{"'+ 
 				  'name":"' + document.getElementById('nome').value + 
@@ -174,7 +175,8 @@ var user = '{"'+
 
 
 	XHR.addEventListener('load', function(event) {
-		alert('Dados Enviados!');
+		// alert('Dados Enviados!');
+		$('#modalSucesso').modal('toggle');
 	});
 	XHR.addEventListener('error', function(event) {
 		$( function() {
