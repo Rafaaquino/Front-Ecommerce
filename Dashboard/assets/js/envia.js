@@ -60,10 +60,10 @@ var addresss = [address];
 
 
 	XHR.addEventListener('load', function(event) {
-		alert('Dados Enviados!');
+		$('#modalSucesso').modal('toggle');
 	});
 	XHR.addEventListener('error', function(event) {
-		alert('Deu ruim!');
+		$('#modalErro').modal('toggle');
 	});
 
 	XHR.open('POST', 'http://mandanode.herokuapp.com/mandanode/user/create');
@@ -117,10 +117,10 @@ var product = '{"'+
 
 
 	XHR.addEventListener('load', function(event) {
-		alert('Dados Enviados!');
+		$('#modalSucesso').modal('toggle');
 	});
 	XHR.addEventListener('error', function(event) {
-		alert('Deu ruim!');
+		$('#modalErro').modal('toggle');
 	});
 
 	XHR.open('POST', 'http://mandanode.herokuapp.com/mandanode/product/create');
@@ -136,7 +136,8 @@ var product = '{"'+
 
 var enviarUser = function(ev) {
 ev.preventDefault();
-$('#modalSucesso').modal('toggle');
+
+ 
 
 var user = '{"'+ 
 				  'name":"' + document.getElementById('nome').value + 
@@ -179,9 +180,7 @@ var user = '{"'+
 		$('#modalSucesso').modal('toggle');
 	});
 	XHR.addEventListener('error', function(event) {
-		$( function() {
-	    	$( "#modalErro" ).dialog();
-	  } );
+		$('#modalErro').modal('toggle');
 	});
 
 	XHR.open('POST', 'http://mandanode.herokuapp.com/mandanode/user/create');

@@ -68,7 +68,7 @@ a{
     color: #556474;
 }
 
-i{
+i.icone-submenu{
     padding: 15px 20px;
 }
 
@@ -439,3 +439,6 @@ body {
     margin: 100px auto;
   }
 
+.modal-contente{
+  background: #fff;
+}
