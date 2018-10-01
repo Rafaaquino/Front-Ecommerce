@@ -3,12 +3,12 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Apparel</title>
+	<title>Carrinho compra</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 
-	<meta name="robots" content="index,follow" />
+	<meta name="robots" content="noindex, nofollow" />
 	<meta name="rating" content="general" />
 	<meta name="language" content="portuguese" />
 	<meta name="country" content="Brasil" />
@@ -24,7 +24,7 @@
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="600"> 
 	<meta property="og:image:height" content="600"> 
-	<meta property="og:description" content="Apparel loja de roupas destinada ao publico masculino" />
+	<meta property="og:description" content="Carrinho de compras" />
 	<meta property="og:site_name" content="Apparel" />
 	<meta property="og:locale" content="pt_br" />
 
@@ -44,31 +44,6 @@
 	<!-- MeanMenu CSS
 	============================================ -->
 	<link rel="stylesheet" type="text/css" href="assets/css/meanmenu.min.css" />
-
-
-  <script>
-        var currentPage = 1;
-        function loadInfo() {
-            $.getJSON("https://randomuser.me/api/", {
-                seed: "tads",
-                page: currentPage,
-                results: 1,
-                nat: "br",
-                gender: "male",
-                inc: "name,picture"
-            }, function (dataJSON) {
-                for (let i = 0; i < dataJSON.results.length; i++) {
-                    let result = dataJSON.results[i];
-                    let titulo = result.name.first;
-                    let urlImagem = result.picture.large;
-                    $("#imgProduto").attr("src", urlImagem);
-                    $("#nomeProduto").text(titulo);
-                }
-                currentPage++;
-            });
-        }
-        
-    </script>
 
 
 
@@ -128,46 +103,48 @@
         <div class="col-lg-12">
           
           <div class="container paddingBT">
-            <div class="row">
-              <div class="col-md-4 info-img">
-                <img src="assets/img/produtos/camisa.jpg" alt="" title="" class="img-fluid" id="" >
-              </div>
-
-              <div class="col-md-8 info-produto paddingL">
-                  
-                  <div class="row">
-                    <h3>T-Shirt Branca</h3>
-                  </div>
-
-                   <div class="row">
-                    <h4>R$50,00</h4>
-                  </div>
-
-                  <div class="row">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean convallis, lorem eget hendrerit pharetra, nisl lacus tempus turpis, ut semper quam eros eu risus. Phasellus ut volutpat purus, at sollicitudin magna. Duis commodo lacus eget turpis congue rhoncus. Proin molestie nisi tellus, quis fermentum arcu vestibulum quis. </p>
-                  </div>
-
-                  <div class="row">
-                    <ul class="tamanhoProduto">
-                      <li class="borderNone"><span class="color-title text-capitalize">Tamanho</span></li>
-                      <li class="active"><a href="#">P</a></li>
-                      <li><a href="#">M</a></li>
-                      <li><a href="#">G</a></li>
-                      <li><a href="#">GG</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="row">
-                    <a href="carrinho.html" class="btn btn-primary"> COMPRAR</a>
-                  </div>
-
-
-
-                  
-                
-              </div>
-            </div>
-          </div>
+            <table id="cart" class="table table-hover table-condensed">
+                      <thead>
+                      <tr>
+                        <th style="width:50%">Produto</th>
+                        <th style="width:10%">Preço</th>
+                        <th style="width:8%">Quantidade</th>
+                        <th style="width:22%" class="text-center">Subtotal</th>
+                        <th style="width:10%"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td >
+                          <div class="row">
+                            <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="..." class="img-fluid"/></div>
+                            <div class="col-sm-8">
+                              <h4 class="nomargin">Produto </h4>
+                              <p><span>T-shirt Branca.</span></p>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Price">R$50,00</td>
+                        <td data-th="Quantity">
+                          <input type="number" class="form-control text-center" value="1">
+                        </td>
+                        <td data-th="Subtotal" class="text-center">R$50,00</td>
+                        <td class="acoes" data-th="">
+                          <button class="btn btn-danger btn-sm">Excluir</button>                
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      
+                      <tr>
+                        
+                        <td colspan="2" class="hidden-xs"></td>
+                        <td class="hidden-xs text-center"><strong>Total R$50,00</strong></td>
+                        <td><a href="#" class="btn btn-success btn-block">Comprar </a></td>
+                      </tr>
+                    </tfoot>
+            </table>
+      </div>
 
         </div>
 
@@ -175,7 +152,7 @@
 
 	
 
-    <footer class="col-md-12 border-top paddingBT">
+     <footer class="col-md-12 border-top paddingBT">
         <div class="row">
           <div class="col-12 col-md">
             <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
@@ -212,6 +189,7 @@
           </div>
         </div>
       </footer>
+
 
 
 
