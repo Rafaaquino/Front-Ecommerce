@@ -93,6 +93,19 @@ i:hover{
 }
 
 
+.escolha{
+	padding: 12px;
+}
+
+.lista-ul{
+	display: -webkit-box;
+}
+
+.txt-descricao{
+	padding-top: 20px;
+    padding-bottom: 15px;
+}
+
 
 /* Carrinho de compra*/
 
