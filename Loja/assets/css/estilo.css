@@ -62,6 +62,10 @@ i:hover{
 	padding-left: 30px;
 }
 
+.espaco   {
+ padding-top: 35px;
+}
+
 .tamanhoProduto ul{
 	list-style: none;
     margin:  0;
@@ -128,9 +132,13 @@ i:hover{
 	
 }
 
+.maior{
+	padding-left: 8rem;
+	padding-right: 8rem;
+}
 
 /*footer*/
-.col_white_amrc { 
+.texto-branco { 
 	color:#FFF;
 }
 
@@ -138,7 +146,7 @@ footer {
 	width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;
 }
 
-.pt2 { 
+.Mp { 
 	padding-top:40px ; margin-bottom:20px ;
 }
 
@@ -146,23 +154,27 @@ footer p {
 	font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;
 }
 
-.mb10 { 
+.texto-footer { 
 	padding-bottom:15px ;
 }
 
-.footer_ul_amrc {
+.copy-footer{
+	padding-top: 15px;
+}
+
+.footer-lista {
  margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; 
 }
 
-.footer_ul_amrc li {
+.footer-lista li {
 	padding:0px 0px 5px 0px;
 }
 
-.footer_ul_amrc li a{ 
+.footer-lista li a{ 
 	color:#CCC;
 }
 
-.footer_ul_amrc li a:hover{
+.footer-lista li a:hover{
  color:#fff; text-decoration:none;
 }
 
@@ -174,19 +186,19 @@ footer p {
 	padding-right:10px; 
 }
 
-.footer_ul2_amrc {
+.footer-lista-2 {
 	margin:0px; list-style-type:none; padding:0px;
 }
 
-.footer_ul2_amrc li p { 
+.footer-lista-2 li p { 
 	display:table; 
 }
 
-.footer_ul2_amrc li a:hover {
+.footer-lista-2 li a:hover {
  text-decoration:none;
 }
 
-.footer_ul2_amrc li i { 
+.footer-lista-2 li i { 
 	margin-top:5px;
 }
 
