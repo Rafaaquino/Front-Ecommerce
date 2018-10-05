@@ -277,4 +277,33 @@ footer p {
 
 
 
+/*LOGIN*/
 
+.form-estilo{
+	padding: 15px;
+    border: solid 1px;
+    border-color: #f2f2f2;
+    border-radius: 5px;
+    background: #fff;
+}
+
+
+.form-espaco{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+
+/*CADASTRO*/
+
+.center{
+	margin: 0 auto;
+}
+
+.direita{
+	float: right;
+}
+
+.bottom{
+	    margin-bottom: 3em;
+}
