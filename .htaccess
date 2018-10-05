@@ -1,0 +1,19 @@
+﻿AddDefaultCharset utf-8
+
+# added assets because we are using grocery CRUD
+
+AddType font/ttf .ttf 
+AddType font/eot .eot 
+AddType font/otf .otf 
+AddType font/woff .woff 
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond $1 !^(index\.php|css|js|img|assets|uploads|images|files|tools/gendata|robots\.txt|favicon.ico)
+	RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
