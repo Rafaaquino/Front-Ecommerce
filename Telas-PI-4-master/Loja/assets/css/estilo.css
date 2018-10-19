@@ -1,0 +1,514 @@
+
+
+.bg-container{
+  background: #f6f6f6;
+}
+
+.bg-escuro{
+	background: #263238;
+}
+
+.bg-menu{
+	background: #fff;
+}
+
+.bg-submenu{
+  background: #1e2328;
+}
+
+.nav-link, i.carrinho{
+	color: #000!important;
+}
+
+.icone-submenu{
+	float: right;
+	padding-left: 15px;
+}
+
+a{
+  
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.menu{
+  height: 95px;
+}
+
+i{
+	color: #fff;
+}
+
+i:hover{
+	color: #f9f9f9;
+}
+
+.carticone{
+	margin-right: 15px;
+}
+
+.info-img, .info-produto{
+	float: left;
+}
+
+.paddingBT{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.paddingL{
+	padding-left: 30px;
+}
+
+.espaco   {
+ padding-top: 35px;
+}
+
+.tamanhoProduto ul{
+	list-style: none;
+    margin:  0;
+    padding-left: 0!important;
+    display: inline-block;
+}
+
+.tamanhoProduto li{
+	float: left;
+    margin: 8px 8px ;
+    list-style: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.borderNone{
+	border-style: none;
+	border-width: none;
+}
+
+.titulo{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+.escolha{
+	padding: 12px;
+}
+
+.lista-ul{
+	display: -webkit-box;
+}
+
+.txt-descricao{
+	padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.img-ajuste{
+	object-fit: cover;
+	object-position: center;
+}
+
+.navbar-toggler {
+	font-size: 1em;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/* Carrinho de compra*/
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	.acoes .btn{
+		width:36%;
+		margin:1.5em 0;
+	}
+	
+	.acoes .btn-info{
+		float:left;
+	}
+	.acoes .btn-danger{
+		float:right;
+	}
+	
+	table#cart thead { display: none; }
+	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table#cart tbody tr td:first-child { background: #333; color: #fff; }
+	table#cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+	
+	
+	
+	table#cart tfoot td{display:block; }
+	table#cart tfoot td .btn{display:block;}
+	
+}
+
+.maior{
+	padding-left: 8rem;
+	padding-right: 8rem;
+}
+
+/*footer*/
+.texto-branco { 
+	color:#FFF;
+}
+
+footer { 
+	width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;
+}
+
+.Mp { 
+	padding-top:40px ; margin-bottom:20px ;
+}
+
+footer p { 
+	font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;
+}
+
+.texto-footer { 
+	padding-bottom:15px ;
+}
+
+.copy-footer{
+	padding-top: 15px;
+}
+
+.footer-lista {
+ margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; 
+}
+
+.footer-lista li {
+	padding:0px 0px 5px 0px;
+}
+
+.footer-lista li a{ 
+	color:#CCC;
+}
+
+.footer-lista li a:hover{
+ color:#fff; text-decoration:none;
+}
+
+.fleft { 
+	float:left;
+}
+
+.padding-right { 
+	padding-right:10px; 
+}
+
+.footer-lista-2 {
+	margin:0px; list-style-type:none; padding:0px;
+}
+
+.footer-lista-2 li p { 
+	display:table; 
+}
+
+.footer-lista-2 li a:hover {
+ text-decoration:none;
+}
+
+.footer-lista-2 li i { 
+	margin-top:5px;
+}
+
+
+.bottom_border { 
+
+	border-bottom:1px solid #323f45; padding-bottom:20px;
+}
+
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li {
+	display:inline;
+}
+
+.foote_bottom_ul_amrc li a { 
+	color:#999; margin:0 12px;
+}
+
+.social_footer_ul { 
+	display:table; margin:15px auto 0 auto; list-style-type:none; 
+}
+
+.social_footer_ul li { 
+	padding-left:20px; padding-top:10px; float:left;
+}
+
+.social_footer_ul li a { 
+	color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;
+}
+
+.social_footer_ul li i {  
+	width:20px; height:20px; text-align:center;
+}
+
+
+
+/*LOGIN*/
+
+.form-estilo{
+	padding: 15px;
+    border: solid 1px;
+    border-color: #f2f2f2;
+    border-radius: 5px;
+    background: #fff;
+}
+
+
+.form-espaco{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+
+/*CADASTRO*/
+
+.center{
+	margin: 0 auto;
+}
+
+.direita{
+	float: right;
+}
+
+.bottom{
+	    margin-bottom: 3em;
+}
+
+
+/*MODAL ERROR*/
+
+.modal-confirm {    
+    color: #434e65;
+    width: 525px;
+  }
+  .modal-confirm .modal-content {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+  }
+  .modal-confirm .modal-header {
+    background: #e85e6c;
+    border-bottom: none;   
+        position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+  }
+  .modal-confirm h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  .modal-confirm .form-control, .modal-confirm .btn {
+    min-height: 40px;
+    border-radius: 3px; 
+  }
+  .modal-confirm .close {
+        position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.5;
+  }
+  .modal-confirm .close:hover {
+    opacity: 0.8;
+  }
+  .modal-confirm .icon-box {
+    color: #fff;    
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  .modal-confirm .icon-box i {
+    font-size: 58px;
+    margin: -2px 0 0 -2px;
+  }
+  .modal-confirm.modal-dialog {
+    margin-top: 80px;
+  }
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+    background: #eeb711;
+    text-decoration: none;
+    transition: all 0.4s;
+        line-height: normal;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 6px 20px;
+    min-width: 150px;
+        border: none;
+    }
+  .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+    background: #eda645;
+    outline: none;
+  }
+  .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+  }
+
+
+
+/*MODAL SUCESS*/
+
+  .modal-confirme {    
+    color: #434e65;
+    width: 525px;
+  }
+  .modal-confirme .modal-contente {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+  }
+  .modal-confirme .modal-headere {
+    background: #47c9a2;
+    border-bottom: none;   
+        position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+  }
+  .modal-confirme h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  .modal-confirme .form-control, .modal-confirme .btn {
+    min-height: 40px;
+    border-radius: 3px; 
+  }
+  .modal-confirme .close {
+        position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.5;
+  }
+  .modal-confirme .close:hover {
+    opacity: 0.8;
+  }
+  .modal-confirme .icon-box {
+    color: #fff;    
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  .modal-confirme .icon-box i {
+    font-size: 64px;
+    margin: -4px 0 0 -4px;
+  }
+  .modal-confirme.modal-dialog {
+    margin-top: 80px;
+  }
+    .modal-confirme .btn {
+        color: #fff;
+        border-radius: 4px;
+    background: #eeb711;
+    text-decoration: none;
+    transition: all 0.4s;
+        line-height: normal;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 6px 20px;
+        border: none;
+    }
+  .modal-confirme .btn:hover, .modal-confirme .btn:focus {
+    background: #eda645;
+    outline: none;
+  }
+  .modal-confirme .btn span {
+    margin: 1px 3px 0;
+    float: left;
+  }
+  .modal-confirme .btn i {
+    margin-left: 1px;
+    font-size: 20px;
+    float: right;
+  }
+  .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+  }
+
+.modal-contente{
+  background: #fff;
+}
+
+/*forma de pagamento*/
+
+.card-heading{
+    color: #fff;
+    background-color: #F89A14;
+    border-color: #F89A14;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.my-3{
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 30px 
+}
+
+.custom-radio{
+  padding-top: 10px;
+}

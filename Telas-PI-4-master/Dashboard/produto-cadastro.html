@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+
+	<title>DASHBOARD ECOMMERCE</title>
+
+
+
+	<!-- BOOTSTRAP CSS-->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-reboot.css">
+
+
+	<!-- MEU ESTILO CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
+
+
+	<!-- FONT AWESOME CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+
+	<header class="col-md-12 topmenu">
+    <div class="row">
+  		<div class="col-md-3 col-xs-3 topmenu-esquerdo"> 
+  			<div class="container">
+  				<img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel">
+  			</div>
+
+  		</div>
+
+  		<div class="col-md-9 topmenu-direito">
+  			
+  			<div class="row top">
+    			 
+          <div class="col-md-4">
+           
+          </div>
+
+          <div class="col-md-4">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+           
+           </form>
+          </div>
+
+          <div class="col-md-4">
+            
+            <ul class="navbar-nav menu-icone">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-circle fa-fw"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">Configurações</a>
+                  <a class="dropdown-item" href="#">Atividades</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+  		</div>
+    </div>		
+
+	</header>
+
+  <div class="col-md-12 container">
+    <div class="row">
+      	<!-- MENU LATERAL ESQUERDO-->
+      	<nav class="col-md-3 col-xs-2  nav-side-menu  menu-esquerdo sidebar ">
+                
+                <div class="menu-list">
+        
+                  <ul id="menu-content" class="menu-content collapse out">
+                      <li  data-toggle="collapse" data-target="#painel" class="collapsed">
+                        <a href="index.html"><i class="fas fa-tachometer-alt"></i> Painel </a>
+                      </li>
+                      
+
+                      <li  data-toggle="collapse" data-target="#clientes" class="collapsed">
+                        <a href="#"><i class="fas fa-users"></i> Clientes <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="clientes">
+                          <li class="ativa"><a href="clientes-cadastro.html">Cadastrar</a></li>
+                          <li class="ativa"><a href="clientes-lista.html">Administrar</a></li>                   
+                      </ul>
+
+
+                      <li data-toggle="collapse" data-target="#produtos" class="collapsed">
+                        <a href="#"><i class="fas fa-box-open"></i> Produtos <span class="arrow"></span></a>
+                      </li>  
+                      <ul class="sub-menu collapse" id="produtos">
+                        <li class="ativa"><a href="produto-cadastro.html">Cadastrar</a></li>
+                          <li class="ativa"><a href="produto-lista.html">Administrar</a></li>
+                      </ul>
+
+
+                      <li data-toggle="collapse" data-target="#vendas" class="collapsed">
+                        <a href="#"><i class="fas fa-shopping-cart"></i>Vendas <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="vendas">
+                        <li class="ativa"><a href="vendas-pedidos.html">Pedidos</a></li>
+                          <li class="ativa"><a href="vendas-relatorio.html">Relatório</a></li>
+                      </ul>
+
+                      <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
+                        <a href="#"><i class="fa fa-user"></i>Usuarios <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="usuarios">
+                        <li class="ativa"><a href="usuario-cadastro.html">Cadastrar</a></li>
+                          <li class="ativa"><a href="usuario-lista.html">Administrar</a></li>
+                      </ul>
+
+
+                      <div class="left">Mais</div>
+
+                      <li data-toggle="collapse" data-target="#configuracoes" class="collapsed">
+                        <a href="#"><i class="fas fa-cog"></i>Configurações <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="configuracoes">
+                        <li class="ativa"><a href="#">....</a></li>
+                          <li class="ativa"><a href="#">....</a></li>
+                      </ul>
+                  </ul>       
+                </div>
+          </nav><!-- FIM MENU LATERAL ESQUERDO-->
+  	  
+
+      <!-- CONTEUDO MEIO-->
+      <div class="col-md-9 bg-container">
+        
+  		    
+          <div class="container  top">
+            <div class="row">
+              <h1 class=""> Cadastrar Produtos</h1>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 center">
+                <form class="form form-vertical md-form" action="" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-4 text-center">
+                          <div class="file-field">
+                              <div class="z-depth-1-half mb-4">
+                                  <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid" alt="example placeholder">
+                              </div>
+                              <div class="d-flex justify-content-center">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="customFile">
+                                      <label class="custom-file-label" for="customFile">Carregar imagem</label>
+                                    </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="form-group">
+                                <label for="nome-produto">Nome Produto* </span></label>
+                                <input type="text" class="form-control" id="nome-produto" name="nome-produto" required>
+                              </div>
+                            </div>                            
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="categoria">Categoria*</span></label>
+                                <input type="text" class="form-control" id="categoria" name="categoria" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="Marca">Marca*</label>
+                                <input type="text" class="form-control" id="Marca" name="Marca" required>
+                              </div>
+                            </div>
+                          </div>
+                          <hr style="margin-top: 2px;">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="qtd">Quantidade*</label>
+                                <input type="number" class="form-control" id="qtd" name="qtd" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                                <label for="codigo">Codigo*</label>
+                                <input type="text" class="form-control" id="codigo" name="codigo" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="medida">Medida*</label>
+                                <select id="medida" name="medida" class="form-control" required>
+                                  <option selected>P</option>
+                                  <option>M</option>
+                                  <option>G</option>
+                                  <option>GG</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="valor">Valor*</label>
+                                <input type="text" class="form-control" id="valor" name="valor" required>
+                              </div>
+                            </div>                            
+                          </div>
+                          
+                          
+                        </div>
+                    </div>
+                    <div class="row padding-2">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Descrição</span>
+                        </div>
+                        <textarea class="form-control" aria-label="descricao" id="descricao" rows="5"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <hr>
+                        <div class="text-left"> 
+                          <button type="submit" onclick="enviarProduct(event)" class="btn btn-primary">Cadastrar</button>
+                           <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>                            
+                      </div> 
+                    </div>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- MODAL ERRO -->
+          <div id="modalErro" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="icon-box">
+                    <i class="fas fa-exclamation"></i>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                  <h4>Ooops!</h4> 
+                  <p>Produto não cadastrado.</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- MODAL ERRO -->
+
+          <!-- MODAL SUCESSO -->
+
+          <div id="modalSucesso" class="modal fade">
+              <div class="modal-dialog modal-confirme">
+                <div class="modal-contente">
+                  <div class="modal-headere">
+                    <div class="icon-box">
+                      <i class="fas fa-check-circle"></i>
+
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <h4>Sucesso!</h4> 
+                    <p>Produto cadastrado.</p>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+          <!-- MODAL ERRO -->
+
+  	   
+      </div><!-- FIM CONTEUDO MEIO-->
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="assets/js/envia.js" type="text/javascript"></script>
+
+
+	<!-- CDN JQUERY BOOTSTRAP--->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<!-- BOOTSTRAP COMPILADO-->
+	<script src="assets/js/bootstrap.bundle.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+
+  <!-- VALIDADOR CAMPOS BOOTSTRAP COMPILADO-->
+  <script src="assets/js/validator.min.js"></script>
+
+  <script>
+  $(document).on("ready", function() {
+      $("#input-700").fileinput({
+          uploadUrl: "/file-upload-single/1",
+          maxFileCount: 5
+      });
+  });
+  </script>
+
+</body>
+</html>
