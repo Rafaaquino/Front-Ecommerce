@@ -50,12 +50,7 @@
         var currentPage = 1;
         function loadInfo() {
             $.getJSON("https://randomuser.me/api/", {
-                seed: "tads",
-                page: currentPage,
-                results: 1,
-                nat: "br",
-                gender: "male",
-                inc: "name,picture"
+               
             }, function (dataJSON) {
                 for (let i = 0; i < dataJSON.results.length; i++) {
                     let result = dataJSON.results[i];
