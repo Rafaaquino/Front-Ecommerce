@@ -30,6 +30,13 @@ $(document).ready(function () {
 		            <td>${produto.quantity}</td>
 		            <td>2008/11/28</td>
 		            <td>R$ ${produto.cash},00</td>
+                    <td> <button class="btn btn-primary btn-xs">
+                            <i class="fas fa-pencil-alt"></i>
+                         </button> 
+                         <button class="btn btn-danger btn-xs"  data-toggle="modal" data-target="#modalRemoverSingular">
+                            <i class="far fa-trash-alt"></i>
+                         </button>
+                    </td>
                     </tr>
               
 		             
