@@ -442,3 +442,21 @@ body {
 .modal-contente{
   background: #fff;
 }
+
+
+.btn-edit{
+  padding: 0.1em 0.4em !important;
+}
+
+.bg-green{
+  background: #47c9a2;
+
+}
+
+.btn-sim{
+  background: #47c9a2 !important;
+}
+
+.btn-nao{
+  background: #dc3545 !important;
+}

@@ -160,12 +160,12 @@
 		                  <thead>
 		                    <tr role="row">
 		                    	<th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 163px;">Produto</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 118px;">Categoria</th>
+		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 100px;">Categoria</th>
 		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 254px;">Descrição</th>
 		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 54px;">Quant</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 114px;">Data</th>
+		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 70px;">Data</th>
 		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 92px;">Preço</th>
-                          <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 92px;">Ações</th>
+                          <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 110px;">Ações</th>
 		                    </tr>
 		                  </thead>
 		                  <tfoot>
@@ -174,8 +174,9 @@
 		                    	<th rowspan="1" colspan="1">Descrição</th>
 		                    	<th rowspan="1" colspan="1">Quant</th>
 		                    	<th rowspan="1" colspan="1">Data</th>
-		                    	<th rowspan="1" colspan="1">Preço</th></tr>
-                          <th rowspan="1" colspan="1">Ações</th></tr>
+		                    	<th rowspan="1" colspan="1">Preço</th>
+                          <th rowspan="1" colspan="1">Ações</th>
+                        </tr>
 		                  </tfoot>
 		                  <tbody id="lista-produtos">
 		                    
@@ -204,6 +205,140 @@
             
 
           </div>
+
+          <!-- MODAL EXCLUIR -->
+          <div id="modalExcluir" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="icon-box">
+                    <i class="fas fa-exclamation"></i>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                  <h4>EXCLUIR</h4> 
+                  <p>Tem certeza que deseja excluir o produto?</p>
+                  <div class="text-center"> 
+                          <button type="submit" class="btn btn-primary btn-sim">Sim</button>
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-danger btn-nao">Cancelar</button>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- MODAL EXCLUIR -->
+
+          <!-- MODAL ALTERAR -->
+
+
+
+          <div id="modalAlterar" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-headere bg-green">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  </div>
+                  <div class="modal-body text-center bg-green">
+                    <h4 style="color: #fff;">ALTERAR</h4> 
+                    
+                   
+                  </div>
+                <div class="container" style="margin-top: 25px;">
+                <form class="form form-vertical md-form" action="" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-4 text-center">
+                          <div class="file-field">
+                              <div class="z-depth-1-half mb-4">
+                                  <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid" alt="example placeholder">
+                              </div>
+                              <div class="d-flex justify-content-center">
+                                  <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="customFile">
+                                      <label class="custom-file-label" for="customFile">Carregar imagem</label>
+                                    </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="form-group">
+                                <label for="nome-produto">Nome Produto* </span></label>
+                                <input type="text" class="form-control" id="nome-produto" name="nome-produto" required>
+                              </div>
+                            </div>                            
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="categoria">Categoria*</span></label>
+                                <input type="text" class="form-control" id="categoria" name="categoria" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="Marca">Marca*</label>
+                                <input type="text" class="form-control" id="Marca" name="Marca" required>
+                              </div>
+                            </div>
+                          </div>
+                          <hr style="margin-top: 2px;">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="qtd">Quantidade*</label>
+                                <input type="number" class="form-control" id="qtd" name="qtd" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                                <label for="codigo">Codigo*</label>
+                                <input type="text" class="form-control" id="codigo" name="codigo" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <div class="form-group">
+                                <label for="medida">Medida*</label>
+                                <select id="medida" name="medida" class="form-control" required>
+                                  <option selected>1.65</option>
+                                  <option>M</option>
+                                  <option>G</option>
+                                  <option>GG</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="form-group">
+                                <label for="valor">Valor*</label>
+                                <input type="text" class="form-control" id="valor" name="valor" required>
+                              </div>
+                            </div>                            
+                          </div>
+                          
+                          
+                        </div>
+                    </div>
+                    <div class="row padding-2">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Descrição</span>
+                        </div>
+                        <textarea class="form-control" aria-label="descricao" id="descricao" rows="5"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <hr>
+                        <div class="text-left"> 
+                          <button type="submit" onclick="enviarProduct(event)" class="btn btn-primary">Alterar</button>
+                           <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+                        </div>                            
+                      </div> 
+                    </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MODAL ALTERAR -->
 
 
   	   

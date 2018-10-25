@@ -30,10 +30,10 @@ $(document).ready(function () {
 		            <td>${produto.quantity}</td>
 		            <td>2008/11/28</td>
 		            <td>R$ ${produto.cash},00</td>
-                    <td> <button class="btn btn-primary btn-xs">
+                    <td> <button class="btn btn-primary btn-xs btn-edit" title="Editar" data-toggle="modal" data-target="#modalAlterar">
                             <i class="fas fa-pencil-alt"></i>
                          </button> 
-                         <button class="btn btn-danger btn-xs"  data-toggle="modal" data-target="#modalRemoverSingular">
+                         <button class="btn btn-danger btn-xs btn-edit"  data-toggle="modal" data-target="#modalExcluir" title="Excluir">
                             <i class="far fa-trash-alt"></i>
                          </button>
                     </td>
@@ -53,3 +53,13 @@ $(document).ready(function () {
    
 });
 
+
+var alterarProduto = function(ev){
+
+    $('#modalAlterar').modal('toggle');
+}
+
+var excluirProduto = function(ev){
+
+    $('#modalExcluir').modal('toggle');
+}
