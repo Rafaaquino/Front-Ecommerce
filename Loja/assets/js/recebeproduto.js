@@ -26,12 +26,14 @@ $(document).ready(function () {
              		<div class="col-md-4" >
               
 		              <div class="card mb-4 box-shadow">
-		                <img  class="card-img-top img-ajuste"  alt="camisa branca" title="camisa branca" style="height: 225px; width: 100%; display: block;" src="assets/img/produtos/camisa.jpg" id="imgProduto">
-		                <div class="card-body">
-		                  <h3 id="nomeProduto" class="card-text">${produto.name}</h3>
+                        <a  href="${produto.id}">
+		                  <img  class="card-img-top img-ajuste"  alt="camisa branca" title="camisa branca" style="height: 225px; width: 100%; display: block;" src="assets/img/produtos/camisa.jpg" id="imgProduto">
+		                </a>
+                        <div class="card-body">
+		                  <h3 id="nomeProduto" class="card-text"> ${produto.name} </h3>
 		                  <div class="d-flex justify-content-between align-items-center">
 		                    <div class="btn-group">
-		                      <a  href="produto.html" class="btn btn-sm btn-outline-secondary">Comprar</a>
+		                      <a  href="${produto.id}" class="btn btn-sm btn-outline-secondary">Comprar</a>
 		                    </div>
 		                    <h4 id="preco-produto" class="text-muted">R$ ${produto.cash},00</h4>
 		                  </div>
@@ -52,24 +54,41 @@ $(document).ready(function () {
       
     }
 
-    /* <script>
-        var currentPage = 1;
-        function loadInfo() {
-            $.getJSON("https://randomuser.me/api/", {
-               
-            }, function (dataJSON) {
-                for (let i = 0; i < dataJSON.results.length; i++) {
-                    let result = dataJSON.results[i];
-                    let titulo = result.name.first;
-                    let urlImagem = result.picture.large;
-                    $("#imgProduto").attr("src", urlImagem);
-                    $("#nomeProduto").text(titulo);
-                }
-                currentPage++;
+
+     $(window).on('hashchange', function () {
+        var hash = window.location.hash;
+        var id = hash.substring(1);
+        console.log(hash + ' -->' + id);
+
+        if (id === '') {
+            $('#produto-unico').load('../index.html', function () {
+                carregaProdutosUnico();
+            });
+        } else {
+            $('#produto-unico').load('views/produto.html', function () {
+                carregaProdutoUnico(id);
             });
         }
-        
-    </script>*/
+    });
+
+    function carregaProdutoUnico(id) {
+        for (var i = 0; i < produtos.length; i++) {
+            var produto = produtos[i];
+            if (produto.id == id) {
+                $('#nome-produto').html(produto.name);
+                $('#descricao-produto').html(produto.description);
+                $('#preco-produto').html(produto.cash);
+                break;
+            }
+        }
+    }
+
+    $('#produto-unico').load('views/index.html', function () {
+        carregaProdutos();
+    });
+
+
+
 });
 
 
