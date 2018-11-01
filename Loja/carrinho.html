@@ -124,21 +124,85 @@
                             </div>
                           </div>
                         </td>
-                        <td data-th="Price">R$50,00</td>
-                        <td data-th="Quantity">
-                          <input type="number" class="form-control text-center" value="1">
+                        <td> R$ <span id="precoproduto1">50,00</span></td>
+                        <td>
+                          <input id="qntProduto1" type="number" class="form-control text-center" value="1" min="1" max="10">
                         </td>
-                        <td data-th="Subtotal" class="text-center">R$50,00</td>
+                        <td class="text-center">R$ <span id="subtotal1"> 50,00</span></td>
+                        <td class="acoes" >
+                          <button class="btn btn-danger btn-sm">Excluir</button>                
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td >
+                          <div class="row">
+                            <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
+                            <div class="col-sm-8">
+                              <h4 class="nomargin">Produto </h4>
+                              <p><span>T-shirt Branca.</span></p>
+                            </div>
+                          </div>
+                        </td>
+                        <td> R$ <span id="precoproduto2">100,00</span></td>
+                        <td>
+                          <input id="qntProduto2" type="number" class="form-control text-center" value="1" min="1" max="10">
+                        </td>
+                        <td class="text-center">R$ <span id="subtotal2"> 100,00</span></td>
                         <td class="acoes" data-th="">
                           <button class="btn btn-danger btn-sm">Excluir</button>                
                         </td>
                       </tr>
+
+                      <tr >
+                        <td >
+                          <div class="row">
+                            <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
+                            <div class="col-sm-8">
+                              <h4 class="nomargin">Produto </h4>
+                              <p><span>T-shirt Branca.</span></p>
+                            </div>
+                          </div>
+                        </td>
+                        <td> R$ <span id="precoproduto3">39,00</span></td>
+                        <td>
+                          <input id="qntProduto3" type="number" class="form-control text-center" value="1" min="1" max="10">
+                        </td>
+                        <td class="text-center">R$ <span id="subtotal3"> 39,00</span></td>
+                        <td class="acoes" data-th="">
+                          <button class="btn btn-danger btn-sm">Excluir</button>                
+                        </td>
+                      </tr>
+
                     </tbody>
-                    <tfoot>                      
+                   
+                    </tfoot>
+                    <tfoot>
                       <tr>                        
-                        <td colspan="2" class="hidden-xs"></td>
-                        <td class="hidden-xs text-center"><strong>Total R$50,00</strong></td>
-                        <td><a href="login.html" class="btn btn-success btn-block">Comprar </a></td>
+                        <td colspan="3" class="hidden-xs"></td>
+                        <td class="hidden-xs text-center"><strong>Subtotal R$ <span id="valorTotal">189,00</span></strong></td>
+                        
+                      </tr>
+                      <tr>
+                        <form name="calculo">
+                        <td class="hidden-xs text-center">
+                          <strong>Calcular Frete </strong><input type="text" name="cep" id="cep">
+                          <input id="botao" class="btn btn-secondary " type="button" value="calcular">
+                          <td colspan="2" class="hidden-xs"></td>
+                        </td>
+                        <td> 
+                            <span id="resultadoFrete"></span>                          
+                        </td>
+                        </form>
+                      </tr>                      
+                      <tr>                        
+                        <td colspan="3" class="hidden-xs"></td>
+                        <td class="hidden-xs text-center"><strong>Total R$ <h2><span id="valorTotal">189,00</span></h2></strong></td>
+                        
+                      </tr>
+                       <tr>                        
+                        <td colspan="3" class="hidden-xs"></td>
+                        <td><a href="endereco-entrega.html" class="btn btn-success btn-block">Comprar </a></td>
                       </tr>
                     </tfoot>
             </table>
@@ -207,6 +271,9 @@
 
 
   <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
+
+  <script type="text/javascript" src="assets/js/valorcarrinho.js"></script>
+  <script type="text/javascript" src="assets/js/enviacompra.js"></script>
   
 </body>
 </html>
