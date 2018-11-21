@@ -119,16 +119,16 @@
                           <div class="row">
                             <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
                             <div class="col-sm-8">
-                              <h4 class="nomargin">Produto </h4>
+                              <h4 class="nomargin">Camisa Vermelha </h4>
                               <p><span>T-shirt Branca.</span></p>
                             </div>
                           </div>
                         </td>
-                        <td> R$ <span id="precoproduto1">50,00</span></td>
+                        <td> R$ <span id="precoproduto1">10,00</span></td>
                         <td>
                           <input id="qntProduto1" type="number" class="form-control text-center" value="1" min="1" max="10">
                         </td>
-                        <td class="text-center">R$ <span id="subtotal1"> 50,00</span></td>
+                        <td class="text-center">R$ <span id="subtotal1"> 10,00</span></td>
                         <td class="acoes" >
                           <button class="btn btn-danger btn-sm">Excluir</button>                
                         </td>
@@ -139,16 +139,16 @@
                           <div class="row">
                             <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
                             <div class="col-sm-8">
-                              <h4 class="nomargin">Produto </h4>
+                              <h4 class="nomargin">Camisa Oakley </h4>
                               <p><span>T-shirt Branca.</span></p>
                             </div>
                           </div>
                         </td>
-                        <td> R$ <span id="precoproduto2">100,00</span></td>
+                        <td> R$ <span id="precoproduto2">50,00</span></td>
                         <td>
                           <input id="qntProduto2" type="number" class="form-control text-center" value="1" min="1" max="10">
                         </td>
-                        <td class="text-center">R$ <span id="subtotal2"> 100,00</span></td>
+                        <td class="text-center">R$ <span id="subtotal2"> 50,00</span></td>
                         <td class="acoes" data-th="">
                           <button class="btn btn-danger btn-sm">Excluir</button>                
                         </td>
@@ -159,16 +159,16 @@
                           <div class="row">
                             <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
                             <div class="col-sm-8">
-                              <h4 class="nomargin">Produto </h4>
+                              <h4 class="nomargin">Blusa Frio </h4>
                               <p><span>T-shirt Branca.</span></p>
                             </div>
                           </div>
                         </td>
-                        <td> R$ <span id="precoproduto3">39,00</span></td>
+                        <td> R$ <span id="precoproduto3">200,00</span></td>
                         <td>
                           <input id="qntProduto3" type="number" class="form-control text-center" value="1" min="1" max="10">
                         </td>
-                        <td class="text-center">R$ <span id="subtotal3"> 39,00</span></td>
+                        <td class="text-center">R$ <span id="subtotal3"> 200,00</span></td>
                         <td class="acoes" data-th="">
                           <button class="btn btn-danger btn-sm">Excluir</button>                
                         </td>
@@ -180,29 +180,30 @@
                     <tfoot>
                       <tr>                        
                         <td colspan="3" class="hidden-xs"></td>
-                        <td class="hidden-xs text-center"><strong>Subtotal R$ <span id="valorTotal">189,00</span></strong></td>
+                        <td class="hidden-xs text-center"><strong>Subtotal R$ <span id="valorSubTotal">260,00</span></strong></td>
                         
                       </tr>
                       <tr>
                         <form name="calculo">
                         <td class="hidden-xs text-center">
-                          <strong>Calcular Frete </strong><input type="text" name="cep" id="cep">
-                          <input id="botao" class="btn btn-secondary " type="button" value="calcular">
+                          <strong>Calcular Frete </strong>
+                          <input type="text" name="cep" id="sCepDestino" maxlength="8" data-mask="00000-000">
+                          <input  class="btn btn-secondary " type="button" onclick="calcular()" value="calcular">
                           <td colspan="2" class="hidden-xs"></td>
                         </td>
-                        <td> 
-                            <span id="resultadoFrete"></span>                          
+                        <td class="hidden-xs text-center"> 
+                            <strong>R$ <span class="" id="resultadoFrete" value="16"></span>,00</strong>                          
                         </td>
                         </form>
                       </tr>                      
                       <tr>                        
                         <td colspan="3" class="hidden-xs"></td>
-                        <td class="hidden-xs text-center"><strong>Total R$ <h2><span id="valorTotal">189,00</span></h2></strong></td>
+                        <td class="hidden-xs text-center"><strong>Total R$ <h2><span id="valorTotal">260</span>,00</h2></strong></td>
                         
                       </tr>
                        <tr>                        
                         <td colspan="3" class="hidden-xs"></td>
-                        <td><a href="endereco-entrega.html" class="btn btn-success btn-block">Comprar </a></td>
+                        <td><button  onclick="enviarCompra()" class="btn btn-success btn-block">Comprar </button></td>
                       </tr>
                     </tfoot>
             </table>
@@ -269,11 +270,29 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
+  <script type="text/javascript">
+    
+
+      function calcular() {
+        var n1 = parseInt("260");
+        var n2 = parseInt("16");
+        document.getElementById('resultadoFrete').innerHTML = n2;
+        document.getElementById('valorTotal').innerHTML = n1 + n2;
+      }
+
+  </script>
+
 
   <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
-
-  <script type="text/javascript" src="assets/js/valorcarrinho.js"></script>
+  
+  <!-- FRETE-->
+  <script type="text/javascript" src="assets/js/frete.js"></script>
+  
+  <!-- ENVIAR COMPRA-->
   <script type="text/javascript" src="assets/js/enviacompra.js"></script>
+
+  <!-- MASCARA INPUT-->
+  <script src="assets/js/mascara.min.js" type="text/javascript"></script>
   
 </body>
 </html>

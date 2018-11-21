@@ -159,65 +159,31 @@
 		                			<table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
 		                  <thead>
 		                    <tr role="row">
-		                    	<th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 163px;">Nome</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 254px;">Endereço</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 118px;">Cidade</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 54px;">Idade</th>
+		                    	<th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 163px;">Id</th>
+                          <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 118px;">Nome</th>
+		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 254px;">Email</th>
 		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 114px;">Data</th>
-		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 92px;">Valor</th>
+		                    	<th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 92px;">Ações</th>
 		                    </tr>
 		                  </thead>
 		                  <tfoot>
-		                    <tr><th rowspan="1" colspan="1">Nome</th>
-		                    	<th rowspan="1" colspan="1">Endereço</th>
-		                    	<th rowspan="1" colspan="1">Cidade</th>
-		                    	<th rowspan="1" colspan="1">Idade</th>
+		                    <tr><th rowspan="1" colspan="1">Id</th>
+		                    	<th rowspan="1" colspan="1">Nome</th>
+                          <th rowspan="1" colspan="1">Email</th>
 		                    	<th rowspan="1" colspan="1">Data</th>
-		                    	<th rowspan="1" colspan="1">Valor</th></tr>
+		                    	<th rowspan="1" colspan="1">Ações</th></tr>
 		                  </tfoot>
-		                  <tbody>
+		                  <tbody id="lista-usuarios">
 		                    
-		                  <tr role="row" class="odd">
+		                    <tr role="row" class="odd">
 		                      <td class="sorting_1">Airi Satou</td>
 		                      <td>Rua olimpiadas</td>
 		                      <td>São Paulo</td>
-		                      <td>33</td>
 		                      <td>2008/11/28</td>
 		                      <td>R$162,700</td>
 		                    </tr>
-		                    <tr role="row" class="even">
-		                      <td class="sorting_1">Angelica Ramos</td>
-		                      <td>Rua olimpiadas</td>
-		                      <td>São Paulo</td>
-		                      <td>47</td>
-		                      <td>2009/10/09</td>
-		                      <td>R$1,200,000</td>
-		                    </tr>
-		                    <tr role="row" class="odd">
-		                      <td class="sorting_1">Ashton Cox</td>
-		                      <td>Rua olimpiadas</td>
-		                      <td>São Paulo</td>
-		                      <td>66</td>
-		                      <td>2009/01/12</td>
-		                      <td>R$86,000</td>
-		                    </tr>
-		                    <tr role="row" class="even">
-		                      <td class="sorting_1">Bradley Greer</td>
-		                      <td>Rua olimpiadas</td>
-		                      <td>São Paulo</td>
-		                      <td>41</td>
-		                      <td>2012/10/13</td>
-		                      <td>R$132,000</td>
-		                    </tr>
-		                    <tr role="row" class="odd">
-		                      <td class="sorting_1">Brenden Wagner</td>
-		                      <td>Rua olimpiadas</td>
-		                      <td>São Paulo</td>
-		                      <td>28</td>
-		                      <td>2011/06/07</td>
-		                      <td>R$206,850</td>
-		                    </tr>
-		                    </tbody>
+		                    
+		                  </tbody>
 		                </table>
 		            </div>
 		        </div>
@@ -249,13 +215,13 @@
 
 
 
-	<!-- CDN JQUERY BOOTSTRAP--->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!-- CDN JQUERY BOOTSTRAP-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-	<!-- BOOTSTRAP COMPILADO-->
-	<script src="assets/js/bootstrap.bundle.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
+
+  <script src="assets/js/listausuarios.js" type="text/javascript"></script>
 
 </body>
 </html>

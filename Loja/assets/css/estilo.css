@@ -66,6 +66,24 @@ i:hover{
  padding-top: 35px;
 }
 
+.mgTop{
+  margin-top: 25px;
+}
+
+
+.mgBottom{
+  margin-bottom: 25px;
+}
+
+
+.pdTop{
+  padding-top: 25px;
+}
+
+.pdBottom{
+  padding-bottom: 25px;
+}
+
 .tamanhoProduto ul{
 	list-style: none;
     margin:  0;
@@ -537,3 +555,12 @@ footer p {
 .bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
 .bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
 .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+
+
+.esconde{
+  display: none;
+}
+
+.mostrar{
+  display: block;
+}

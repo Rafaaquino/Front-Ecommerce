@@ -63,7 +63,7 @@ var addresss = [address];
 	XHR.send(dataStr);
 
 
-	setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
+	//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 
 
 

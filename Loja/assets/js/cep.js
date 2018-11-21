@@ -17,7 +17,7 @@ function limpa_formulário_cep() {
         else {
             //CEP não Encontrado.
             limpa_formulário_cep();
-            alert("CEP não encontrado.");
+            $('#modalErro').modal('toggle');
         }
     }
         
