@@ -18,10 +18,9 @@ $(document).ready(function () {
     function listarProdutos() {
         
         $('#lista-produtos').html('');
-
+        localStorage.setItem('produtos', JSON.stringify(produtos))
         for (var i = 0; i < produtos.length; i++) {
             var produto = produtos[i];
-           
              $('#lista-produtos').append(`
              		<div class="col-md-4" >
               
@@ -33,7 +32,8 @@ $(document).ready(function () {
 		                  <h3 id="nomeProduto" class="card-text"> ${produto.name} </h3>
 		                  <div class="d-flex justify-content-between align-items-center">
 		                    <div class="btn-group">
-		                      <a  href="${produto.id}" class="btn btn-sm btn-outline-secondary">Comprar</a>
+		                      <button type="button" onclick="handleChooseProduct(${produto.id})" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                              <button type="button" onclick="carrinhoProduto(${produto.id})" class="btn btn-sm btn-outline-primary">Carrinho</button>
 		                    </div>
 		                    <h4 id="preco-produto" class="text-muted">R$ ${produto.cash},00</h4>
 		                  </div>
@@ -54,42 +54,36 @@ $(document).ready(function () {
       
     }
 
-
-     $(window).on('hashchange', function () {
-        var hash = window.location.hash;
-        var id = hash.substring(1);
-        console.log(hash + ' -->' + id);
-
-        if (id === '') {
-            $('#produto-unico').load('../index.html', function () {
-                carregaProdutosUnico();
-            });
-        } else {
-            $('#produto-unico').load('views/produto.html', function () {
-                carregaProdutoUnico(id);
-            });
-        }
-    });
-
-    function carregaProdutoUnico(id) {
-        for (var i = 0; i < produtos.length; i++) {
-            var produto = produtos[i];
-            if (produto.id == id) {
-                $('#nome-produto').html(produto.name);
-                $('#descricao-produto').html(produto.description);
-                $('#preco-produto').html(produto.cash);
-                break;
-            }
-        }
-    }
-
-    $('#produto-unico').load('views/index.html', function () {
-        carregaProdutos();
-    });
-
-
-
+    
 });
 
+function handleChooseProduct(id){
+    console.log(id);
 
+    const produtos = JSON.parse(localStorage.getItem("produtos"));
+    console.log(produtos);
+
+    const produto = produtos.find(a => a.id === id);
+    console.log(produto);
+
+    localStorage.setItem('produtoSelecionado', JSON.stringify(produto))
+    window.location.href = 'produto.html';
+}
+
+function carrinhoProduto(id){
+    console.log(id);
+
+    const produtos = JSON.parse(localStorage.getItem("produtos"));
+    console.log(produtos);
+
+    const produto = produtos.find(a => a.id === id);
+    console.log(produto);
+
+    const produtosCarrinho = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
+
+    produtosCarrinho.push(produto);
+
+    localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho))
+    //window.location.href = '../Loja/produto.html';
+}
 
