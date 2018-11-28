@@ -17,23 +17,26 @@ $(document).ready(function () {
 
     function listarProdutos() {
         
+        
+
         $('#lista-produtos').html('');
         localStorage.setItem('produtos', JSON.stringify(produtos))
         for (var i = 0; i < produtos.length; i++) {
             var produto = produtos[i];
+            contaClique();
              $('#lista-produtos').append(`
              		<div class="col-md-4" >
               
 		              <div class="card mb-4 box-shadow">
-                        <a  href="${produto.id}">
+                        
 		                  <img  class="card-img-top img-ajuste"  alt="camisa branca" title="camisa branca" style="height: 225px; width: 100%; display: block;" src="assets/img/produtos/camisa.jpg" id="imgProduto">
-		                </a>
+		                
                         <div class="card-body">
 		                  <h3 id="nomeProduto" class="card-text"> ${produto.name} </h3>
 		                  <div class="d-flex justify-content-between align-items-center">
 		                    <div class="btn-group">
-		                      <button type="button" onclick="handleChooseProduct(${produto.id})" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                              <button type="button" onclick="carrinhoProduto(${produto.id})" class="btn btn-sm btn-outline-primary">Carrinho</button>
+		                      <button type="button" onclick="cliqueProduto(${produto.id})" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                              <button type="button" name="btncarrinho" onclick="carrinhoProduto(${produto.id})"  class="btn btn-sm btn-outline-primary">Carrinho</button>
 		                    </div>
 		                    <h4 id="preco-produto" class="text-muted">R$ ${produto.cash},00</h4>
 		                  </div>
@@ -48,7 +51,7 @@ $(document).ready(function () {
                // $('#nomeProduto').append(`<h3 id="nomeProduto" class="card-text"><a href="#${produto.id}">${produto.brand}</a> </h3>`);
             
                 //$('#preco-produto').append(`<h4 id="preco-produto" class="text-muted">R$ ${produto.cash}</h4>`);
-           
+          
             
         }
       
@@ -57,7 +60,28 @@ $(document).ready(function () {
     
 });
 
-function handleChooseProduct(id){
+function contaClique(){
+
+      var click = 0;
+
+      function click_add() {
+        click += 1;
+        console.log(click)
+
+        document.getElementById('cart').innerHTML =  click;
+      }
+
+
+      $( document ).ready(function(){
+        $("button[name='btncarrinho']").click(function(){
+           click_add();
+        });
+      });
+}
+
+
+function cliqueProduto(id){
+
     console.log(id);
 
     const produtos = JSON.parse(localStorage.getItem("produtos"));
