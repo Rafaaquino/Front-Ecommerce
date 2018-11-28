@@ -12,6 +12,12 @@
 	background: #fff;
 }
 
+.menufixo{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
 .bg-submenu{
   background: #1e2328;
 }
