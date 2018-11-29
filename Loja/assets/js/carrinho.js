@@ -14,7 +14,6 @@ $(document).ready(function () {
         
        for (var i = 0; i < produtos.length; i++) {
             var produto = produtos[i]; 
-            
           $('#produtosCarrinho').append(`
 
                     <tr>
@@ -27,9 +26,9 @@ $(document).ready(function () {
                           </div>
                         </div>
                       </td>
-                      <td> R$ <span id="precoproduto1">${produto.cash},00</span></td>
+                      <td> R$ <span class="preco">${produto.cash},00</span></td>
                       <td>
-                        <input id="qntProduto1" type="number" class="form-control text-center" value="1" min="1" max="10">
+                        <input id="qntProduto" type="number" class="form-control text-center" name="qntProduto" value="1" min="1" max="10">
                       </td>
                       <td class="text-center">R$ <span id="subtotal1"> 10,00</span></td>
                       <td class="acoes" >

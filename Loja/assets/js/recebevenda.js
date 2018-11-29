@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 function listarVenda() {
 
-        var vendas = JSON.parse(localstorage.getItem('vendaConcluida'))
+        var vendas = JSON.parse(localstorage.getItem('vendaConcluida'));
 
         $('#protocolo').html('');
 
