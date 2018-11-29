@@ -8,44 +8,36 @@ function PreviewImage() {
             document.getElementById("uploadPreview").src = oFREvent.target.result;
             
         };
+        uploadImage();
         
-        uploadImage(); 
 }
 
 function uploadImage(){
       
-
-    // Evento Submit do formulário
-  $('#formProduto').submit(function() {
  
     // Captura os dados do formulário
-    var uploadImage = document.getElementById('uploadImage');
- 
-    // Instância o FormData passando como parâmetro o formulário
-    var formData = new FormData(uploadImage);
- 
+  var uploadImage = document.getElementById('uploadImage').files[0];
+
+  // Instância o FormData passando como parâmetro o formulário
+  var formData = new FormData();
+  formData.append('image', uploadImage);
+  console.log(uploadImage);
     // Envia O FormData através da requisição AJAX
-    $.ajax({
-       
-       type: "POST",
-       enctype: 'multipart/form-data',
-       url: "http://mandanode.herokuapp.com/mandanode/product/insert/221",
-       data: formData,
-       dataType: 'json',
-       processData: false,  
-       contentType: false,
-       success: function(retorno){
-          if (retorno.status == '1'){
-            alert("img enviada");
-          }else{
-            alert("erro não enviada");
-          }
-          
-         }
-    });
- 
-    return false;
-  
+  $.ajax({
+     type: "POST",
+     enctype: 'multipart/form-data',
+     url: "http://mandanode.herokuapp.com/mandanode/product/insert/31",
+     data: formData,
+     dataType: 'json',
+     processData: false,  
+     contentType: false,
+     success: (retorno) => {
+        if (retorno.status == '1') {
+          alert("img enviada");
+        } else {
+          alert("erro não enviada");
+        } 
+    }
   });
 
 
