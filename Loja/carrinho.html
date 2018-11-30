@@ -69,7 +69,7 @@
 
       <!-- menu Fixo -->
       <nav class="navbar navbar-expand-md navbar-dark  bg-menu ">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
         	<img src="assets/img/logo/logo.png" class="img-fluid" alt="Logo Apparel" title="Logo Apparel" width="200"> 
         </a>
         
@@ -139,8 +139,7 @@
                     <tfoot>
                       <tr>                        
                         <td colspan="3" class="hidden-xs"></td>
-                        <td><button  id="btCalcular" class="btn btn-success btn-block">Calcular </button></td>
-                        <!--<td class="hidden-xs text-center"><strong>Subtotal R$ <span id="valorSubTotal">260,00</span></strong></td>-->
+                        <td class="hidden-xs text-center"><strong>Subtotal R$ <span id="valorSubTotal">00</span>,00</strong></td>
                         
                       </tr>
                       <tr>
@@ -148,7 +147,7 @@
                         <td class="hidden-xs text-center">
                           <strong>Calcular Frete </strong>
                           <input type="text" name="cep" id="sCepDestino" maxlength="8" data-mask="00000-000">
-                          <input   class="btn btn-secondary " type="button"  value="calcular">
+                          <input  class="btn btn-secondary " type="button" onclick="calcular()" value="calcular">
                           <td colspan="2" class="hidden-xs"></td>
                         </td>
                         <td class="hidden-xs text-center"> 
@@ -231,7 +230,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     
       $('#btCalcular').click( function () {
          $('#produtosCarrinho').each(function () {
@@ -241,19 +240,6 @@
             document.getElementById('valorTotal').innerHTML = total;
          });
       })
-
-  </script>
-
-  <!-- CALCULO PRODUTOS E FRETE
-  <script type="text/javascript">
-    
-
-      function calcular() {
-        var n1 = parseInt("260");
-        var n2 = parseInt("16");
-        document.getElementById('resultadoFrete').innerHTML = n2;
-        document.getElementById('valorTotal').innerHTML = n1 + n2;
-      }
 
   </script>-->
 

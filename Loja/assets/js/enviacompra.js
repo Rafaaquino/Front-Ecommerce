@@ -34,7 +34,7 @@ window.localStorage.setItem('enviarTotalCompra', totalPrice);
 //console.log(endereco.city);
 
 
-	window.location.href = "endereco-entrega.html";
+	window.location.href = "login.html";
 
 
 }

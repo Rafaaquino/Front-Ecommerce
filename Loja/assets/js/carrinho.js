@@ -8,12 +8,17 @@ $(document).ready(function () {
 
     function produtosCarrinho() {
         
-       
+       var total = 0;
        
        $('#produtosCarrinho').html('');
         
        for (var i = 0; i < produtos.length; i++) {
+
+            total += produtos[i].cash;
+            console.log(total);
+
             var produto = produtos[i]; 
+          
           $('#produtosCarrinho').append(`
 
                     <tr>
@@ -38,7 +43,9 @@ $(document).ready(function () {
      	`);
       } 
 
+      document.getElementById('valorSubTotal').innerHTML = total;
 
+      document.getElementById('valorTotal').innerHTML = total;
        // $('#nomeProduto').append(`<h3 id="nomeProduto" class="card-text"><a href="#${produto.id}">${produto.brand}</a> </h3>`);
     
         //$('#preco-produto').append(`<h4 id="preco-produto" class="text-muted">R$ ${produto.cash}</h4>`);
@@ -54,6 +61,15 @@ $(document).ready(function () {
 });
 
 
+function calcular() {
+
+        var text = document.getElementById("valorSubTotal").innerHTML;
+        var total = parseInt(text);
+
+        var frete = parseInt("16");
+        document.getElementById("resultadoFrete").innerHTML = frete;
+        document.getElementById("valorTotal").innerHTML = total + frete;
+}
 
 
 function excluirProduto(id){

@@ -49,6 +49,7 @@ var addresss = [address];
 
 	XHR.addEventListener('load', function(event) {
 		$('#modalSucesso').modal('toggle');
+		setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 	});
 	XHR.addEventListener('error', function(event) {
 		$('#modalErro').modal('toggle');
@@ -63,7 +64,7 @@ var addresss = [address];
 	XHR.send(dataStr);
 
 
-	//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
+	
 
 
 
