@@ -475,3 +475,50 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+
+.panel-widget .large {
+    color: #373b45;
+    font-size: 3em;
+}
+
+.panel-widget {
+    padding: 10px 0;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+    text-align: center;
+    color: #333;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-xl {
+  font-size: 1em;
+}
+
+.color-blue {
+    color: #30a5ff;
+}
+.color-orange {
+    color: #ffb53e;
+}
+.color-teal {
+    color: #1ebfae;
+}
+.color-red {
+    color: #f9243f;
+}
+
+.panel-widget .large {
+    color: #373b45;
+    font-size: 3em;
+}
