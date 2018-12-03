@@ -10,6 +10,8 @@ $(document).ready(function () {
             success: function (data) {
                 console.log(data);
                 usuarios = data;
+
+                localStorage.setItem('listaUsuario', JSON.stringify(usuarios));
                 listarUsuarios();
             }
         });

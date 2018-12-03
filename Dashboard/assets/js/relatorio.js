@@ -26,22 +26,28 @@ $(document).ready(function () {
 
         $('#relatorioJson').html('');
 
-       const  relatorio = JSON.parse(localStorage.getItem("relatorio"));
+          const  relatorio = JSON.parse(localStorage.getItem("relatorio"));
+
+          const user = JSON.parse(localStorage.getItem("listaUsuario"));
        
           var preco = 0;
           var pedidos =0;
-          const venda = relatorio.length;
+         
 
+
+          const venda = relatorio.length;
+          const usuarios = user.length;
 
           for (var i = 0; i < relatorio.length; i++) {
 
           preco += relatorio[i].price;
-          pedidos += relatorio[i].products.length;      
+          pedidos += relatorio[i].products.length; 
+
 
         }
 
 
-        console.log(pedidos)
+        console.log(usuarios);
 
 
 
@@ -59,7 +65,7 @@ $(document).ready(function () {
                   <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                     <div class="panel panel-blue panel-widget border-right">
                       <div class="row no-padding"><em class="fa fa-xl fa-users color-orange"></em>
-                        <div class="large">52</div>
+                        <div class="large">${usuarios}</div>
                         <div class="text-muted">Usuários</div>
                       </div>
                     </div>
