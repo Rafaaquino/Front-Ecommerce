@@ -1,6 +1,20 @@
 var enviarDados = function(ev) {
 ev.preventDefault();
 
+
+
+    
+      var email =  document.getElementById('email').value;
+
+      var nome =  document.getElementById('nome').value;
+
+      localStorage.setItem('usuario', JSON.stringify(email));
+      localStorage.setItem('nome', JSON.stringify(nome));
+
+
+
+
+
 var address = '{"'+ 
 					'address":"' + document.getElementById('endereco').value + 
 				  '", "' +

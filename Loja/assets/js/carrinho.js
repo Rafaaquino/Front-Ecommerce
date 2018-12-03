@@ -8,14 +8,13 @@ $(document).ready(function () {
 
     function produtosCarrinho() {
         
-       var total = 0;
+       const total = produtos.reduce((a,b) => a + b.cash, 0);
        
        $('#produtosCarrinho').html('');
-        
+        if (produtos.length === 0) {
+          $('#produtosCarrinho').append('<h1 class="sem-items">Nenhum item no seu carrinho</h1>')
+        }
        for (var i = 0; i < produtos.length; i++) {
-
-            total += produtos[i].cash;
-            console.log(total);
 
             var produto = produtos[i]; 
           
@@ -32,10 +31,7 @@ $(document).ready(function () {
                         </div>
                       </td>
                       <td> R$ <span class="preco">${produto.cash},00</span></td>
-                      <td>
-                        <input id="qntProduto" type="number" class="form-control text-center" name="qntProduto" value="1" min="1" max="10">
-                      </td>
-                      <td class="text-center">R$ <span id="subtotal1"> 10,00</span></td>
+                      
                       <td class="acoes" >
                         <button type="button" onclick="(excluirProduto(${produto.id}))" class="btn btn-danger btn-sm">Excluir</button>                
                       </td>
@@ -68,7 +64,11 @@ function calcular() {
 
         var frete = parseInt("16");
         document.getElementById("resultadoFrete").innerHTML = frete;
-        document.getElementById("valorTotal").innerHTML = total + frete;
+        
+        var valorTotal =  total + frete;
+        document.getElementById("valorTotal").innerHTML = valorTotal;
+
+        localStorage.setItem('valor', JSON.stringify(valorTotal));
 }
 
 
@@ -76,8 +76,15 @@ function excluirProduto(id){
 
       console.log(id);
 
-      const produto = produtos.find(a => a.id === id);
+      const produtosCarrinho = JSON.parse(localStorage.getItem('produtosCarrinho'));
+      const produto = produtosCarrinho.find(a => a.id === id);
       console.log(produto);
 
-      localStorage.removeItem('produtoSelecionado', JSON.stringify(produto));
+      const index = produtosCarrinho.indexOf(produto);
+      console.log(index);
+      if (index !== -1) {
+        produtosCarrinho.splice(index, 1);
+      }
+      localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho));
+      window.location.reload();
 }
