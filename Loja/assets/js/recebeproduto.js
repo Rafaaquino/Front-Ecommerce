@@ -93,8 +93,20 @@ function cliqueProduto(id){
     console.log(produto);
 
     localStorage.setItem('produtoSelecionado', JSON.stringify(produto))
+
+    const produtosCarrinho = JSON.parse(localStorage.getItem("produtosCarrinho")) || [];
+
+    produtosCarrinho.push(produto);
+
+    localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho))
+
+    localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho))
+
+
     window.location.href = 'produto.html';
 }
+
+
 
 function carrinhoProduto(id){
     console.log(id);

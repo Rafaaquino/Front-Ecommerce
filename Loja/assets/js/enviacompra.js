@@ -39,7 +39,19 @@ window.localStorage.setItem('enviarTotalCompra', totalPrice);
 
 var enviarEndereco = function() {
 
-var address = '{"'+ 
+
+	    var cep = document.getElementById('cep').value;
+        var numero = document.getElementById('numero').value;
+
+        if(cep == null || cep == ""){
+        	alert("preencha o CEP!");
+        }
+        else if(numero == null || numero == ""){
+        	alert("preencha o numero!");
+        }
+        else{
+
+        	var address = '{"'+ 
 					'address":"' + document.getElementById('rua').value + 
 				  '", "' +
 				  'street":"' + " - " + 
@@ -56,27 +68,53 @@ var address = '{"'+
 				  '"}';
 
 
-// Cria um json a partir do objeto "aux" 
-///var jsonAddress = JSON.stringify(address);
+					// Cria um json a partir do objeto "aux" 
+					///var jsonAddress = JSON.stringify(address);
 
-// "Seta" este json no localStorage
-window.localStorage.setItem('enviarEndereco', address);
+					// "Seta" este json no localStorage
+					window.localStorage.setItem('enviarEndereco', address);
 
-// Recupera o json do localStorage
-//var jsonEndereco = window.localStorage.getItem('endereco');
+					// Recupera o json do localStorage
+					//var jsonEndereco = window.localStorage.getItem('endereco');
 
-// Converte este json para objeto
-//var endereco = JSON.parse(jsonEndereco);
+					// Converte este json para objeto
+					//var endereco = JSON.parse(jsonEndereco);
 
-//console.log(endereco.city);
- 
-     window.location.href = "escolha-pagamento.html";
+					//console.log(endereco.city);
+					 
+					window.location.href = "escolha-pagamento.html";
+
+        }
+
+
 
 }
 
 var enviarCartao = function() {
 
-var card = '{"'+ 
+
+
+         var numero = document.getElementById('cardnumero').value;         
+         var nome = document.getElementById('cardNome').value;
+         var ccv = document.getElementById('cardCCV').value;
+         var data = document.getElementById('dataExp').value;
+        
+
+        if(numero == null || numero == ""){
+        	alert("preencha o numero do cartão!");
+        }
+        else if(nome == null || nome == ""){
+        	alert("preencha o Nome!");
+        }
+        else if(ccv == null || ccv == ""){
+        	alert("preencha CCV do cartão!");
+        }
+        else if(data == null || data == ""){
+        	alert("preencha a data de expiração!");
+        }
+        else{
+
+        	var card = '{"'+ 
 				  'name":"' + document.getElementById('cardNome').value + 
 				  '", "' +
 				  'number":"' + document.getElementById('cardnumero').value + 
@@ -88,23 +126,9 @@ var card = '{"'+
 				  '"}';
 
 
+			window.localStorage.setItem('enviarCartao', card);
 
-// Cria um json a partir do objeto "aux" 
-///var jsonAddress = JSON.stringify(address);
-
-// "Seta" este json no localStorage
-window.localStorage.setItem('enviarCartao', card);
-
-// Recupera o json do localStorage
-//var jsonEndereco = window.localStorage.getItem('endereco');
-
-// Converte este json para objeto
-//var endereco = JSON.parse(jsonEndereco);
-
-//console.log(endereco.city);
-
-
-
+        }
 
 }
 

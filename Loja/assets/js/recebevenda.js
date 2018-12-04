@@ -8,6 +8,9 @@ $(document).ready(function () {
 
 function listarVenda() {
 
+        localStorage.removeItem('enviaCartao');
+        localStorage.removeItem('produtoCarrinho');
+
         const vendas = JSON.parse(localStorage.getItem("vendaConcluida"));
         
         const nome = JSON.parse(localStorage.getItem("nome"));
@@ -29,8 +32,8 @@ function listarVenda() {
               <div >
                 <center>  
                   <h4>Sucesso - Seu Pedido Foi Confirmado!</h4>
-                  <h5>Número do pedido: <strong >${vendas.protocoll} </strong></h5>
-                  <h5>Valor compra: R$<strong >${valor} </strong>,00</h5>
+                  <h5>Número do pedido: <strong >#${vendas.protocoll} </strong></h5>
+                  <h5>Valor da compra: R$<strong >${valor}</strong>,00</h5>
                   <hr>  
                 </center>
               </div>
