@@ -223,24 +223,12 @@
 
     <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
 
+    <script src="assets/js/login.js" type="text/javascript"></script>
+
     <script type="text/javascript">
       
 
-      function login(){
-    
-      var email =  document.getElementById('email1').value;
-      console.log(login);
-
-      var nome =  document.getElementById('nome').value;
-      console.log(nome);
-
-      localStorage.setItem('usuario', JSON.stringify(email));
-      localStorage.setItem('nome', JSON.stringify(nome));
-
-      setTimeout(function (){window.location.href = "endereco-entrega.html";}, 1000);
-
-      }
-
+      
       function telaEntrega(){
 
           window.location.href = "endereco-entrega.html";

@@ -60,6 +60,7 @@ $(document).ready(function () {
 function calcular() {
 
         var text = document.getElementById("valorSubTotal").innerHTML;
+        console.log(text);
         var total = parseInt(text);
 
         var frete = parseInt("16");

@@ -2,27 +2,23 @@
 
 var enviarCompra = function() {
 
-		var user = '{"'+ 'id":"1011"}';
+		
+
+	
+ 		var val = document.getElementById("valorTotal").innerHTML;
 
 		var freight = '"16.00"';
 
 
-		var totalPrice ='"276.00"';
+		var totalPrice = '"' + val + '"';
 
 		
-		var product1 = '{"'+ 'id":"221"}';
-
-		var product2 = '{"'+ 'id":"241"}';
-
-		var product3 = '{"'+ 'id":"261"}';
+		
 
 		//var products = [product1 product2 product3];		  
 
 // "Seta" este json no localStorage
-window.localStorage.setItem('enviarProduto1', product1);
-window.localStorage.setItem('enviarProduto2', product2);
-window.localStorage.setItem('enviarProduto3', product3);
-window.localStorage.setItem('enviarUsuarioCompra', user);
+
 window.localStorage.setItem('enviarFreteCompra', freight);
 window.localStorage.setItem('enviarTotalCompra', totalPrice);
 // Recupera o json do localStorage
@@ -120,9 +116,10 @@ window.localStorage.setItem('enviarCartao', card);
 var enviarVenda = function() {
 
 
-
-
 enviarCartao();
+
+
+var prodCarrrinho = window.localStorage.getItem('produtosCarrinho');
  
 
 // Recupera o json do localStorage
@@ -138,28 +135,6 @@ var jsonCartao = window.localStorage.getItem('enviarCartao');
 
 // Converte este json para objeto
 //var cartao = JSON.parse(jsonCartao);
-
-
-
-// Recupera o json do localStorage
-var jsonProduto1 = window.localStorage.getItem('enviarProduto1');
-
-// Converte este json para objeto
-//var produto1 = JSON.parse(jsonProduto1);
-
-
-// Recupera o json do localStorage
-var jsonProduto2 = window.localStorage.getItem('enviarProduto2');
-
-// Converte este json para objeto
-//var produto2 = JSON.parse(jsonProduto2);
-
-
-// Recupera o json do localStorage
-var jsonProduto3 = window.localStorage.getItem('enviarProduto3');
-
-// Converte este json para objeto
-//var produto3 = JSON.parse(jsonProduto3);
 
 
 // Recupera o json do localStorage
@@ -197,8 +172,7 @@ var sale = '{"'+
 				  ', "' +
 				  'address":' + jsonEndereco +  
 				  ', "' +
-				  'products":[' + jsonProduto1 + ',' + jsonProduto2 + ', '+ jsonProduto3 + 
-				  ']}';
+				  'products":' + prodCarrrinho +'}';
 
 
 	
@@ -207,7 +181,7 @@ var sale = '{"'+
 	//var venda = JSON.parse(sale);
 
 
-	
+	var token = localStorage.getItem('token');
 		    
 			
 	var XHR = new XMLHttpRequest();
@@ -237,6 +211,7 @@ var sale = '{"'+
 
 	// header HTTP para dados de formulário POST
 	XHR.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+	XHR.setRequestHeader('Authorization', token);
 
 	// Finally, send our data.
 	XHR.send(sale);
