@@ -162,7 +162,7 @@ var jsonCartao = window.localStorage.getItem('enviarCartao');
 
 
 // Recupera o json do localStorage
-var jsonUsuario = window.localStorage.getItem('enviarUsuarioCompra');
+var jsonUsuario = '"id":"1011"';
 
 // Converte este json para objeto
 //var user = JSON.parse(jsonUsuario);
@@ -190,7 +190,7 @@ var sale = '{"'+
 				  ', "' +
 				  'price":' + jsonTotal + 
 				  ', "' +
-				  'userModel":' + jsonUsuario +  
+				  'userModel":' +'{}' +  
 				  ', "' +
 				  'card":' + jsonCartao +  
 				  ', "' +

@@ -49,6 +49,9 @@ ev.preventDefault();
         }
         else{
 
+        	var bearer = "";
+		    var acesso = "";
+
         	localStorage.setItem('usuario', JSON.stringify(email));
      		localStorage.setItem('nome', JSON.stringify(nome));
       
@@ -99,9 +102,38 @@ ev.preventDefault();
 
 
 				XHR.addEventListener('load', function(event) {
+
+					var response = XHR.responseText;
+
+					var resposta = JSON.parse(response);
+
+					console.log(resposta);
+
+
+					if (resposta.sucess) {
+
+
+						var imprime = JSON.parse(response);
+
+						bearer = "Bearer "+imprime.response;
+
+
+						localStorage.setItem('token', bearer);
+
+						localStorage.setItem('usuario', JSON.stringify(email));
+				      	localStorage.setItem('nome', JSON.stringify(nome));
+						
+						//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
+					}
+					else{
+						$('#modalErro').modal('toggle');
+					}
+
+
 					$('#modalSucesso').modal('toggle');
-					setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
+					//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 				});
+
 				XHR.addEventListener('error', function(event) {
 					$('#modalErro').modal('toggle');
 				});

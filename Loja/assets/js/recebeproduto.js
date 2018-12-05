@@ -25,13 +25,23 @@ $(document).ready(function () {
         localStorage.setItem('produtos', JSON.stringify(produtos))
         for (var i = 0; i < produtos.length; i++) {
             var produto = produtos[i];
+
+            var produto = produtos[i];
+            var imagem = "assets/img/Produtos/camisa.jpg";
+
+            if(produto.images.length > 0){
+
+              imagem = produto.images[0].url;
+            } 
+
+            
             contaClique();
              $('#lista-produtos').append(`
              		<div class="col-md-4" >
               
 		              <div class="card mb-4 box-shadow">
                         
-		                  <img  class="card-img-top img-ajuste"  alt="camisa branca" title="camisa branca" style="height: 225px; width: 100%; display: block;" src="assets/img/produtos/camisa.jpg" id="imgProduto">
+		                  <img  class="card-img-top img-ajuste"  alt="camisa branca" title="camisa branca" style="height: 225px; width: 100%; display: block;" src="${imagem}" id="imgProduto">
 		                
                         <div class="card-body">
 		                  <h3 id="nomeProduto" class="card-text"> ${produto.name} </h3>

@@ -51,8 +51,12 @@ var login = function() {
 
 			console.log(response);
 
+			var resposta = JSON.parse(response);
 
-			if (response.sucess == true) {
+			console.log(resposta);
+
+			if (resposta.sucess) {
+
 
 				var imprime = JSON.parse(response);
 

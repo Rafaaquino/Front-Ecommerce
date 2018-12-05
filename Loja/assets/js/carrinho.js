@@ -16,14 +16,20 @@ $(document).ready(function () {
         }
        for (var i = 0; i < produtos.length; i++) {
 
-            var produto = produtos[i]; 
+            var produto = produtos[i];
+            var imagem = "assets/img/Produtos/camisa.jpg";
+
+            if(produto.images.length > 0){
+
+              imagem = produto.images[0].url;
+            } 
           
           $('#produtosCarrinho').append(`
 
                     <tr>
                       <td >
                         <div class="row">
-                          <div class="col-sm-4 hidden-xs"><img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
+                          <div class="col-sm-4 hidden-xs"><img src="${imagem}" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
                           <div class="col-sm-8">
                             <h4 class="nomargin">${produto.name}</h4>
                             <p><span>${produto.description}</span></p>
