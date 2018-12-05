@@ -122,15 +122,17 @@ ev.preventDefault();
 
 						localStorage.setItem('usuario', JSON.stringify(email));
 				      	localStorage.setItem('nome', JSON.stringify(nome));
+
+				      	$('#modalSucesso').modal('toggle');
 						
-						//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
+						setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 					}
 					else{
 						$('#modalErro').modal('toggle');
 					}
 
 
-					$('#modalSucesso').modal('toggle');
+					
 					//setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 				});
 

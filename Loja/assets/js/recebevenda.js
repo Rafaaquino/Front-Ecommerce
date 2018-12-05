@@ -1,15 +1,29 @@
 $(document).ready(function () {
 
+
+    const produtosvenda = JSON.parse(localStorage.getItem('produtosCarrinho'));
+
+    localStorage.setItem('produtosVendas', JSON.stringify(produtosvenda));
+
+    const produtosvendas = JSON.parse(localStorage.getItem('produtosVendas'));
+
     listarVenda();
 
-});
+
 
 
 
 function listarVenda() {
 
+        
+
+        //localStorage.setItem('produtosVendas', JSON.stringify(produtosVendas));
+
         localStorage.removeItem('enviaCartao');
-        localStorage.removeItem('produtoCarrinho');
+        localStorage.removeItem('produtosCarrinho');
+        localStorage.removeItem('produtoSelecionado');
+        localStorage.removeItem('enviarFreteCompra');
+
 
         const vendas = JSON.parse(localStorage.getItem("vendaConcluida"));
         
@@ -57,9 +71,38 @@ function listarVenda() {
                       <p><strong> Cidade: </strong><span id="cep"> ${vendas.address.city} </span></p>
                       <p><strong> UF: </strong><span id="uf"> ${vendas.address.state} </span></p>
              </address>
-        `);         
+        `);
+
+
+       var imagem = ""; 
+
+       $('#vendaProdutos').html('');
+       
+       for(var i = 0; i < produtosvendas.length; i++) {
+
+        var produto = produtosvendas[i];
+        var imagem = "assets/img/Produtos/camisa.jpg";
+
+        if(produto.images.length > 0){
+
+          imagem = produto.images[0].url;
+        } 
+          
+              $('#vendaProdutos').append(`
+
+                        <tr>
+                            <td width="20">
+                                <img class="pull-left img-circle nav-user-photo" width="100" src="${imagem}" />  
+                            </td>
+                            <td><strong>Nome</strong><br>${produto.name}</td>
+                            <td><strong>Valor</strong><br>R$ ${produto.brand},00</td>
+                            <td align="center"><strong>Data</strong><br>${produto.cash}</td>
+                        </tr>
+          `);
+          }         
         
 
         
         
 }
+});

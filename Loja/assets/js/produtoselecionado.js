@@ -3,6 +3,13 @@ $(document).ready(function () {
 	
     var produto = JSON.parse(localStorage.getItem('produtoSelecionado')); 
 
+    var imagem = "assets/img/Produtos/camisa.jpg";
+
+            if(produto.images.length > 0){
+
+              imagem = produto.images[0].url;
+            } 
+
     listarProdutos();
 	
 
@@ -15,7 +22,7 @@ $(document).ready(function () {
 
 
             <div class="col-md-4 info-img">
-                <img src="assets/img/produtos/camisa.jpg" alt="t-shirt branca" title="t-shirt branca" class="img-fluid" >
+                <img src="${imagem}" alt="t-shirt branca" title="t-shirt branca" class="img-fluid" >
               </div>
 
               <div class="col-md-8 info-produto paddingL">

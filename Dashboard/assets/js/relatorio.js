@@ -14,37 +14,34 @@ $(document).ready(function () {
 
                 window.localStorage.setItem('relatorio', JSON.stringify(sale));
                   
-                listarProdutos();
+                listarRelatorio();
                
             }
         });
     }
 
-    function listarProdutos() {
+    function listarRelatorio() {
         
         
 
         $('#relatorioJson').html('');
 
-          const  relatorio = JSON.parse(localStorage.getItem("relatorio"));
-
+          const relatorio = JSON.parse(localStorage.getItem("relatorio"));
           const user = JSON.parse(localStorage.getItem("listaUsuario"));
        
           var preco = 0;
-          var pedidos =0;
-         
+          var pedidos =0;        
 
 
           const venda = relatorio.length;
           const usuarios = user.length;
 
+
           for (var i = 0; i < relatorio.length; i++) {
 
-          preco += relatorio[i].price;
-          pedidos += relatorio[i].products.length; 
-
-
-        }
+              preco += relatorio[i].price;
+              pedidos += relatorio[i].products.length;
+         }
 
 
         console.log(usuarios);
@@ -54,7 +51,7 @@ $(document).ready(function () {
              $('#relatorioJson').append(`
                 
 
-                <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+                <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
                     <div class="panel panel-teal panel-widget border-right">
                       <div class="row no-padding"><em class="fa  fa-shopping-cart color-blue"></em>
                         <div class="large">${venda}</div>
@@ -62,15 +59,8 @@ $(document).ready(function () {
                       </div>
                     </div>
                   </div>
-                  <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                    <div class="panel panel-blue panel-widget border-right">
-                      <div class="row no-padding"><em class="fa fa-xl fa-users color-orange"></em>
-                        <div class="large">${usuarios}</div>
-                        <div class="text-muted">Usuários</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+                  
+                  <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
                     <div class="panel panel-orange panel-widget border-right">
                       <div class="row no-padding"><em class="fa fa-xl fa-box color-red"></em>
                         <div class="large">${pedidos}</div>
@@ -78,7 +68,7 @@ $(document).ready(function () {
                       </div>
                     </div>
                   </div>
-                  <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+                  <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
                     <div class="panel panel-red panel-widget ">
                       <div class="row no-padding"><i class="fas  fa-xl fa-dollar-sign color-teal"></i>
                         <div class="large">${preco},00</div>
@@ -88,6 +78,29 @@ $(document).ready(function () {
                   </div>
                 
               `); 
+
+
+             $('#usuarioPedidos').html('');
+             for (var i = 0; i < relatorio.length; i++) {
+                  
+                  var relatorioUser = relatorio[i];
+
+                  
+                  $('#usuarioPedidos').append(`
+
+                          <tr>
+                            <td>${relatorioUser.userModel.id}</td>
+                            <td>${relatorioUser.userModel.name}</td>
+                            <td>${relatorioUser.products[0].name}</td>
+                            <td>#${relatorioUser.protocoll}</td>
+                            <td>R$ ${relatorioUser.price},00</td>
+                            <td>${relatorioUser.dateCri}</td>
+                          </tr>
+
+                    `);
+
+
+             }
 
       }
           

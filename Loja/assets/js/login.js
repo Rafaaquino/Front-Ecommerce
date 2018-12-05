@@ -74,7 +74,7 @@ var login = function() {
 				setTimeout(function (){window.location.href = "endereco-entrega.html";}, 5000);
 			}
 			else{
-				alert("Login Invalido!");
+				$('#modalErro').modal('toggle');
 			}
 
 			});
