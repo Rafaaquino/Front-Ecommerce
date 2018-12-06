@@ -78,6 +78,8 @@ var addresss = [address];
 var enviarProduct = function(ev) {
 ev.preventDefault();
 
+PreviewImage();
+
 var product = '{"'+ 
 				  'name":"' + document.getElementById('nome-produto').value + 
 				  '", "' +
@@ -117,7 +119,35 @@ var product = '{"'+
 
 
 	XHR.addEventListener('load', function(event) {
-		$('#modalSucesso').modal('toggle');
+		
+
+		var response = XHR.responseText;
+
+		console.log(response);
+
+		var resposta = JSON.parse(response);
+
+			console.log(resposta);
+
+
+			if (resposta.sucess) {
+
+
+				var idProduto = "http://mandanode.herokuapp.com/mandanode/product/insert/"+resposta.response;
+				console.log(idProduto);
+
+
+				localStorage.setItem('idProduto', idProduto);
+
+		      	$('#modalSucesso').modal('toggle');
+
+		      	setTimeout(function(){ uploadImage(); }, 2000);
+			}
+			else{
+				$('#modalErro').modal('toggle');
+			}
+
+
 	});
 	XHR.addEventListener('error', function(event) {
 		$('#modalErro').modal('toggle');
@@ -190,5 +220,59 @@ var user = '{"'+
 
 	// Finally, send our data.
 	XHR.send(user);
+}
+
+
+/*Função para fazer upload da imagem*/
+
+function PreviewImage() { 
+
+        
+
+        var oFReader = new FileReader(); 
+        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+        oFReader.onload = function (oFREvent) { 
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+            
+            
+        };
+        
+        
+}
+
+function uploadImage(){
+      
+  var idProduto = localStorage.getItem("idProduto");
+  console.log(idProduto);
+
+
+    // Captura os dados do formulário
+  var uploadImage = $('#uploadImage')[0].files[0];
+
+  // Instância o FormData passando como parâmetro o formulário
+  var formData = new FormData();
+  formData.append('image', uploadImage);
+  console.log(uploadImage);
+    // Envia O FormData através da requisição AJAX
+  $.ajax({
+     type: "POST",
+     url: idProduto,
+     data: formData,
+     processData: false,  
+     contentType: false,
+     success: function(retorno){
+
+      console.log(retorno);
+        var resposta = JSON.parse(retorno);
+
+        console.log(resposta);
+
+        setTimeout(function(){ location.reload(); }, 6000);
+ 
+    }
+
+  });
+
 }
 

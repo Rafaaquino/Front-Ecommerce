@@ -1,13 +1,16 @@
 
 
 function PreviewImage() { 
+
+        
+
         var oFReader = new FileReader(); 
         oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
 
         oFReader.onload = function (oFREvent) { 
             document.getElementById("uploadPreview").src = oFREvent.target.result;
-          
             
+            uploadImage();
         };
         
         
@@ -15,7 +18,10 @@ function PreviewImage() {
 
 function uploadImage(){
       
- 
+ var idProduto = localStorage.getItem("idProduto");
+  console.log(idProduto);
+
+
     // Captura os dados do formulário
   var uploadImage = $('#uploadImage')[0].files[0];
 
@@ -26,7 +32,7 @@ function uploadImage(){
     // Envia O FormData através da requisição AJAX
   $.ajax({
      type: "POST",
-     url: "http://mandanode.herokuapp.com/mandanode/product/insert/221",
+     url: "http://mandanode.herokuapp.com/mandanode/product/insert/451",
      data: formData,
      processData: false,  
      contentType: false,
@@ -34,6 +40,8 @@ function uploadImage(){
 
       console.log(retorno);
         var resposta = JSON.parse(retorno);
+
+        console.log(resposta);
 
         if (resposta.sucess) {
           alert("img enviada");

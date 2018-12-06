@@ -175,7 +175,25 @@
 
   <script type="text/javascript" src="assets/js/produtoselecionado.js"></script>
   
+ 
+<!-- Color tamanho-->
+  <script type="text/javascript">
+    
+      $(function () {
 
+        $("li").click(function () {
+          $("li").removeAttr("style");
+          $(this).css("background-color", "#6c757d");
+        });
+
+        $("li a").click(function () {
+          $("li").removeAttr("style");
+          $(this).closest("li").css("background-color", "#6c757d");
+          return false;
+        });
+
+      });
+  </script>
 
 
 </body>
