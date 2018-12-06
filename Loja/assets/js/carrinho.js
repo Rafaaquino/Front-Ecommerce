@@ -32,7 +32,7 @@ $(document).ready(function () {
                           <div class="col-sm-4 hidden-xs"><img src="${imagem}" alt="t-shirt branca" title="t-shirt branca" class="img-fluid"/></div>
                           <div class="col-sm-8">
                             <h4 class="nomargin">${produto.name}</h4>
-                            <p><span>${produto.description}</span></p>
+                            <p><span>${produto.brand}</span></p>
                           </div>
                         </div>
                       </td>

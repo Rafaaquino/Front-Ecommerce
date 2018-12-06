@@ -28,13 +28,46 @@
 
 
 	<header class="col-md-12 topmenu">
+
+   
+
     <div class="row">
   		<div class="col-md-3 col-xs-3 topmenu-esquerdo"> 
-  			<div class="container">
-  				<img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel">
-  			</div>
 
-  		</div>
+         <nav class="navbar navbar-expand-md menu-aparece " >
+        <a href="index.html"><img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel"></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="background-image: url(assets/img/menu-button.png);">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+          <ul class="navbar-nav mr-auto">
+            
+            <p><strong>Clientes</strong></p>
+            <li class="nav-item"><a class="nav-link" href="clientes-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="clientes-lista.html">Administrar</a></li>
+
+            <p><strong>Produtos</strong></p>
+            <li class="nav-item"><a class="nav-link" href="produto-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="produto-lista.html">Administrar</a></li>
+
+            <p><strong>Vendas</strong></p>
+            <li class="nav-item"><a class="nav-link" href="vendas-relatorio.html">Relatório</a></li>
+
+            <p><strong>Usuarios</strong></p>
+            <li class="nav-item"><a class="nav-link" href="usuario-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="usuario-lista.html">Administrar</a></li>
+
+          </ul>          
+        </div>
+      </nav>
+
+      <div class="menu-some">
+  			<div class="container" >
+  				<a href="index.html"><img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel"></a>
+  			</div>
 
   		<div class="col-md-9 topmenu-direito">
   			
@@ -44,15 +77,9 @@
            
           </div>
 
-          <div class="col-md-4">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-           
-           </form>
-          </div>
+          
 
-          <div class="col-md-4">
+          <div class="col-md-8">
             
             <ul class="navbar-nav menu-icone">
               <li class="nav-item dropdown">
@@ -60,8 +87,8 @@
                   <i class="fas fa-user-circle fa-fw"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                  <a class="dropdown-item" href="#">Configurações</a>
-                  <a class="dropdown-item" href="#">Atividades</a>
+                  <a class="dropdown-item" href="vendas-relatorio.html">Relatorio</a>
+                  <a class="dropdown-item" href="produto-lista.html">Produtos</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
                 </div>
@@ -70,14 +97,17 @@
           </div>
 
   		</div>
-    </div>		
+    </div>
+    </div>	
+  </div>
+</div>	
 
 	</header>
 
   <div class="col-md-12 container">
     <div class="row">
       	<!-- MENU LATERAL ESQUERDO-->
-      	<nav class="col-md-3 col-xs-2  nav-side-menu  menu-esquerdo sidebar ">
+      	<nav class="col-md-3 col-xs-2  nav-side-menu  menu-esquerdo sidebar menu-some ">
                 
                 <div class="menu-list">
         
@@ -109,7 +139,6 @@
                         <a href="#"><i class="fas fa-shopping-cart"></i>Vendas <span class="arrow"></span></a>
                       </li>
                       <ul class="sub-menu collapse" id="vendas">
-                        <li class="ativa"><a href="vendas-pedidos.html">Pedidos</a></li>
                           <li class="ativa"><a href="vendas-relatorio.html">Relatório</a></li>
                       </ul>
 
@@ -146,199 +175,29 @@
             </div>
 
             <div class="row">
-        <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 margin_10 bg-white">
-            <!-- Trans label pie charts strats here-->
-            <div class="widget-1">
-                <div class="card-body squarebox square_boxs">
-                    <div class="col-12 float-left nopadmar">
-                        <div class="row">
-                            <div class="square_box col-6 text-right">
-                                <span>Vendas</span>
+                <div class="col-lg-6  margin_10 bg-white">
+                    <!-- Trans label pie charts strats here-->
+                    <div class="widget-1">
+                        <div class="card-body squarebox square_boxs">
+                            <div class="col-12 float-left nopadmar">
+                                <div class="row">
+                                    <div class="square_box col-6 text-right" style="margin-bottom: 30px;">
+                                        <span>Bem Vindo ao Dashboard</span>
 
-                                <div class="number" id="myTargetElement3">0</div>
+                                    </div>
+                                   
+                                </div>
+
                             </div>
-                            <div class="col-6">
-                            <span class="widget_circle3 float-right">
-                            <i class="livicon livicon-evo-holder " style="width: 40px; height: 40px;"><svg height="40" version="1.1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.75px; top: -0.5px;" id="canvas-for-livicon-52"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#01bc8c" stroke="none" d="M29.379,14.958C26.633,12.368,22,7.6,16,7.6S5.366,12.368,2.621,14.958C1.7930000000000001,15.739,1.794,16.264,2.622,17.045C5.367,19.637,10,24.4,16,24.4S26.633,19.631999999999998,29.378999999999998,17.043C30.207,16.261,30.207,15.738,29.379,14.958ZM15.996,21.5C12.96,21.5,10.496,19.037,10.496,16C10.496,12.965,12.96,10.5,15.996,10.5C19.033,10.5,21.496000000000002,12.965,21.496000000000002,16C21.496,19.037,19.033,21.5,15.996,21.5ZM13,16C13,17.656,14.345,19,16,19C17.656,19,19,17.656,19,16V15.975C18.68,16.3,18.242,16.5,17.75,16.5C16.785,16.5,16,15.716,16,14.75C16,14.055,16.41,13.449,16.996,13.17C16.686999999999998,13.06,16.349999999999998,12.999,15.999999999999998,12.999C14.345,12.999,13,14.345,13,16Z" stroke-width="0" transform="matrix(1.25,0,0,1.25,0,0)"></path></svg></i>
-                                </span>
-
                         </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-6 col-xl-3  col-md-6 col-sm-6 margin_10 bg-white">
-            <!-- Trans label pie charts strats here-->
-            <div class="widget-1">
-                <div class="card-body squarebox square_boxs">
-                    <div class="col-12 float-left nopadmar">
-                        <div class="row">
-                            <div class="square_box col-6 text-right">
-                                <span>Usuarios</span>
-
-                                <div class="number" id="myTargetElement4">116</div>
-                            </div>
-                            <div class="col-6">
-                            <span class="widget_circle4 float-right">
-                            <i class="livicon livicon-evo-holder " data-name="user" data-l="true" data-c="#F89A14" data-hc="#F89A14" data-s="40" id="livicon-53" style="width: 40px; height: 40px;"><svg height="40" version="1.1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px; top: -0.5px;" id="canvas-for-livicon-53"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#f89a14" stroke="none" d="M21.291,21.271C20.116,20.788,19.645,19.452,19.645,19.452S19.116,19.756,19.116,18.908C19.116,18.058,19.645,19.452,20.176,16.179000000000002C20.176,16.179000000000002,21.644,15.753000000000002,21.351999999999997,12.238000000000003H20.997999999999998C20.997999999999998,12.238000000000003,21.880999999999997,8.479000000000003,20.997999999999998,7.206000000000003C20.115999999999996,5.933000000000003,19.763999999999996,5.085000000000003,17.820999999999998,4.477000000000003C15.879999999999997,3.8700000000000028,16.587999999999997,3.991000000000003,15.174999999999997,4.053000000000003C13.762999999999998,4.1140000000000025,12.585999999999997,4.902000000000003,12.585999999999997,5.325000000000003C12.585999999999997,5.325000000000003,11.703999999999997,5.386000000000003,11.351999999999997,5.750000000000003C10.998999999999997,6.1140000000000025,10.410999999999996,7.810000000000002,10.410999999999996,8.235000000000003S10.805999999999996,11.509000000000004,11.099999999999996,12.116000000000003L10.648999999999996,12.237000000000004C10.354999999999995,15.752000000000004,11.824999999999996,16.178000000000004,11.824999999999996,16.178000000000004C12.353999999999996,19.450000000000003,12.883999999999995,18.057000000000006,12.883999999999995,18.907000000000004C12.883999999999995,19.755000000000003,12.353999999999996,19.451000000000004,12.353999999999996,19.451000000000004S11.883999999999995,20.787000000000003,10.707999999999995,21.270000000000003C9.530999999999995,21.755000000000003,3.002999999999995,24.361000000000004,2.471999999999994,24.906000000000002C1.942,25.455,2.002,28,2.002,28H29.997999999999998C29.997999999999998,28,30.058999999999997,25.455,29.526999999999997,24.906C28.996,24.361,22.468,21.756,21.291,21.271Z" stroke-width="0" transform="matrix(1.25,0,0,1.25,0,0)"></path></svg></i>
-                                </span>
-
-                        </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 margin_10 bg-white">
-            <!-- Trans label pie charts strats here-->
-            <div class="widget-1">
-                <div class="card-body squarebox square_boxs">
-                    <div class="col-12 float-left nopadmar">
-                        <div class="row">
-                            <div class="square_box col-6 text-right">
-                                <span>Visitantes</span>
-
-                                <div class="number" id="myTargetElement1">0</div>
-                            </div>
-                            <div class="col-6">
-                            <span class="widget_circle1 float-right">
-                         <i class="livicon livicon-evo-holder " data-name="flag" data-l="true" data-c="#e9573f" data-hc="#e9573f" data-s="40" id="livicon-54" style="width: 40px; height: 40px;"><svg height="40" version="1.1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.25px; top: -0.5px;" id="canvas-for-livicon-54"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#e9573f" stroke="none" d="M4,28.8V3.2C4,2.537,4.358,2,4.8,2H5.2C5.642,2,6,2.537,6,3.2V28.8L5,30L4,28.8Z" stroke-width="0" transform="matrix(1.25,0,0,1.25,0,0)"></path><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#e9573f" stroke="none" d="M28.5,16.1C27.6,15.6,26.6,17.4,22.6,17.4C19.900000000000002,17.41,22.5,16.45,19.900000000000002,16.099999999999998C19.1,16,17.7,17,15.2,17C12.299999999999999,17,12.799999999999999,16.1,10.7,16.2C9.7,16.2,8.8,16.7,7,16.5C7,16.5,7.3,11.7,7.3,10.2C7.3,8.6,7,3.3999999999999995,7,3.3999999999999995C8.4,3.4,11,3,12.4,3C13.8,3,13.8,4.6,15,4.7C15.4,4.7,18.6,3.6,20.5,3.6C22,3.6,21.4,6,22.4,5.9C22.7,5.880000000000001,25.099999999999998,4.7,26,4.6000000000000005C26.6,5.8,26.7,9.4,26.8,10.5C26.9,11.3,28.1,14.9,28.6,16.1Z" stroke-width="0" transform="matrix(1.25,0,0,1.25,0,0)"></path></svg></i>
-                                </span>
-
-                        </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 margin_10 bg-white">
-            <!-- Trans label pie charts strats here-->
-            <div class="widget-1">
-                <div class="card-body squarebox square_boxs">
-                    <div class="col-12 float-left nopadmar">
-                        <div class="row">
-                            <div class="square_box col-6 text-right">
-                                <span>Pedidos</span>
-
-                                <div class="number" id="myTargetElement2">7</div>
-                            </div>
-                            <div class="col-6">
-                            <span class="widget_circle2 float-right">
- <i class="livicon livicon-evo-holder " data-name="pen" data-l="true" data-c="#418BCA" data-hc="#418BCA" data-s="40" id="livicon-55" style="width: 40px; height: 40px;"><svg height="40" version="1.1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.5px;" id="canvas-for-livicon-55"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#418bca" stroke="none" d="M11.132,21L11.132,21L11.132,21L11.132,21L11.132,21L11.132,21L11.132,21L11.132,21ZM11.132,21L11.132,21L11.132,21L11.132,21L11.132,21L11.132,21ZM12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496ZM12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496L12.466,10.496ZM27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157L27.84,13.157Z" stroke-width="0" transform="matrix(1.25,0,0,1.25,0,0)"></path><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="#418bca" stroke="none" d="M25.354,4.1L27.9,6.646C28.363,7.112,28.366999999999997,7.875,27.9,8.342L25.919999999999998,10.322000000000001L21.678,6.08L23.658,4.1C24.126,3.631,24.886,3.631,25.354,4.1ZM4.707,25.879C4.707,25.879,4.707,23.051000000000002,7.535,20.223000000000003L20.971,6.787L25.213,11.030000000000001L11.778,24.465C8.950000000000001,27.293,6.121,27.293,6.121,27.293S4.413,28.413,4,28C3.558,27.559,4.707,25.879,4.707,25.879ZM9.091,23.191L21.819,10.463999999999999L20.97,9.614999999999998L8.242,22.344L9.091,23.191Z" transform="matrix(1.25,0,0,1.25,0,0)" stroke-width="0"></path></svg></i>
-                                </span>
-
-                        </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
           </div>
 
       </div><!-- FIM CONTEUDO MEIO-->
 
-      <div class="col-lg-12">
-            <h2>Epidemiologia</h2>
-            <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-primary">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-th fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">50</div>
-                                          <div>Total</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-green">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-thumbs-o-up fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">8</div>
-                                          <div>Aceito</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-red">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-thumbs-o-down fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">0</div>
-                                          <div>Recusado</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-yellow">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-clock-o fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">8</div>
-                                          <div>Aguardando PDF</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-sun-flower">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-clock-o fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">0</div>
-                                          <div>Aguardando nota</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="panel panel-warning">
-                              <div class="panel-heading">
-                                  <div class="row">
-                                      <div class="col-xs-3">
-                                          <i class="fa fa-file-pdf-o fa-5x"></i>
-                                      </div>
-                                      <div class="col-xs-9 text-right">
-                                          <div class="huge">42</div>
-                                          <div>Finalizado</div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
 
     </div>
   </div>

@@ -522,3 +522,37 @@ body {
     color: #373b45;
     font-size: 3em;
 }
+
+.navbar{
+  background: #000!important;
+}
+
+.menu-aparece{
+    display: none;
+  }
+
+ul p{
+  color: #fff!important;
+}  
+
+@media (max-width: 768px){
+
+  .menu-some{
+    display: block;
+  }
+
+  .menu-aparece{
+    display: none;
+  }
+}
+
+@media (max-width: 770px){
+
+  .menu-some{
+    display: none;
+  }
+
+  .menu-aparece{
+    display: block;
+  }
+}

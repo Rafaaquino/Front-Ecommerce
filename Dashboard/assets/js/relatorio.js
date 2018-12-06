@@ -27,14 +27,14 @@ $(document).ready(function () {
         $('#relatorioJson').html('');
 
           const relatorio = JSON.parse(localStorage.getItem("relatorio"));
-          const user = JSON.parse(localStorage.getItem("listaUsuario"));
+          //const user = JSON.parse(localStorage.getItem("listaUsuario"));
        
           var preco = 0;
           var pedidos =0;        
 
 
           const venda = relatorio.length;
-          const usuarios = user.length;
+          //const usuarios = user.length;
 
 
           for (var i = 0; i < relatorio.length; i++) {
@@ -44,7 +44,7 @@ $(document).ready(function () {
          }
 
 
-        console.log(usuarios);
+        //console.log(usuarios);
 
 
 

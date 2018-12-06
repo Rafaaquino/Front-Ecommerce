@@ -29,31 +29,58 @@
 
 
 	<header class="col-md-12 topmenu">
+
+   
+
     <div class="row">
-  		<div class="col-md-3 col-xs-3 topmenu-esquerdo"> 
-  			<div class="container">
-  				<img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel">
-  			</div>
+      <div class="col-md-3 col-xs-3 topmenu-esquerdo"> 
 
-  		</div>
+         <nav class="navbar navbar-expand-md menu-aparece " >
+        <a href="index.html"><img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel"></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="background-image: url(assets/img/menu-button.png);">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+          <ul class="navbar-nav mr-auto">
+            
+            <p><strong>Clientes</strong></p>
+            <li class="nav-item"><a class="nav-link" href="clientes-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="clientes-lista.html">Administrar</a></li>
 
-  		<div class="col-md-9 topmenu-direito">
-  			
-  			<div class="row top">
-    			 
+            <p><strong>Produtos</strong></p>
+            <li class="nav-item"><a class="nav-link" href="produto-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="produto-lista.html">Administrar</a></li>
+
+            <p><strong>Vendas</strong></p>
+            <li class="nav-item"><a class="nav-link" href="vendas-relatorio.html">Relatório</a></li>
+
+            <p><strong>Usuarios</strong></p>
+            <li class="nav-item"><a class="nav-link" href="usuario-cadastro.html">Cadastrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="usuario-lista.html">Administrar</a></li>
+
+          </ul>          
+        </div>
+      </nav>
+
+      <div class="menu-some">
+        <div class="container" >
+          <a href="index.html"><img src="assets/img/logo-1.png" class="img-fluid logo" width="250" alt="Logo Apparel" title="Apparel"></a>
+        </div>
+
+      <div class="col-md-9 topmenu-direito">
+        
+        <div class="row top">
+           
           <div class="col-md-4">
            
           </div>
 
-          <div class="col-md-4">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-           
-           </form>
-          </div>
+          
 
-          <div class="col-md-4">
+          <div class="col-md-8">
             
             <ul class="navbar-nav menu-icone">
               <li class="nav-item dropdown">
@@ -61,8 +88,8 @@
                   <i class="fas fa-user-circle fa-fw"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                  <a class="dropdown-item" href="#">Configurações</a>
-                  <a class="dropdown-item" href="#">Atividades</a>
+                  <a class="dropdown-item" href="vendas-relatorio.html">Relatorio</a>
+                  <a class="dropdown-item" href="produto-lista.html">Produtos</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
                 </div>
@@ -70,15 +97,18 @@
             </ul>
           </div>
 
-  		</div>
-    </div>		
+      </div>
+    </div>
+    </div>  
+  </div>
+</div>  
 
-	</header>
+  </header>
 
   <div class="col-md-12 container">
     <div class="row">
       	<!-- MENU LATERAL ESQUERDO-->
-      	<nav class="col-md-3 col-xs-2  nav-side-menu  menu-esquerdo sidebar ">
+      	<nav class="col-md-3 col-xs-2  nav-side-menu  menu-esquerdo sidebar menu-some">
                 
                 <div class="menu-list">
         

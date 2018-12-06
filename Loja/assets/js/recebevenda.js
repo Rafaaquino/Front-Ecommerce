@@ -95,8 +95,8 @@ function listarVenda() {
                                 <img class="pull-left img-circle nav-user-photo" width="100" src="${imagem}" />  
                             </td>
                             <td><strong>Nome</strong><br>${produto.name}</td>
-                            <td><strong>Valor</strong><br>R$ ${produto.brand},00</td>
-                            <td align="center"><strong>Data</strong><br>${produto.cash}</td>
+                            <td><strong>Marca</strong><br>${produto.brand}</td>
+                            <td align="center"><strong>Valor</strong><br>R$ ${produto.cash},00</td>
                         </tr>
           `);
           }         
