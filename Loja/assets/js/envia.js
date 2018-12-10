@@ -7,6 +7,8 @@ ev.preventDefault();
       var email =  document.getElementById('email').value;
       var nome =  document.getElementById('nome').value;
       var senha = document.getElementById('senha').value;
+      var data = document.getElementById('data').value;
+      var sexo = document.getElementById('sexo').value;
       var cpf = document.getElementById('cpf').value;
       var celular = document.getElementById('celular').value;
       var cep = document.getElementById('cep').value;
@@ -25,6 +27,12 @@ ev.preventDefault();
         }
         else if(senha == null || senha == ""){
         	alert("preencha a senha!");
+        }
+        else if(data == null || data == ""){
+        	alert("preencha a data!");
+        }
+        else if(sexo == null || sexo == ""){
+        	alert("preencha o sexo!");
         }
         else if(cpf == null || cpf == ""){
         	alert("preencha o CPF!");

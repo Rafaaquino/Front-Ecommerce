@@ -33,9 +33,12 @@
 
 
 /* MENU ESQUERDO*/
+header{
+  background: #000;
+}
 
 .topmenu-esquerdo{
-    background: #ffffff;
+    background: #000;
     float: left;
     text-align: center;
     height: 70px;

@@ -16,16 +16,19 @@ $(document).ready(function () {
     }
 
     function listarProdutos() {
+
+        console.log(produtos);
         
         $('#lista-produtos').html('');
 
         for (var i = 0; i < produtos.length; i++) {
             var produto = produtos[i];
+
            
              $('#lista-produtos').append(`
                     <tr role="row" class="odd" >
-             		<td class="sorting_1">${produto.name}</td>
-		            <td>${produto.idcategory}</td>
+             		<td class="sorting_1"><img src="${produto.images[0].url}" width="150"></td>
+		            <td>${produto.name}</td>
 		            <td>${produto.description}</td>
 		            <td>${produto.quantity}</td>
 		            <td>2008/11/28</td>

@@ -25,7 +25,7 @@ $(document).ready(function () {
              $('#lista-clientes').append(`
                     <tr role="row" class="odd">
                     
-                          <td>${cliente.id}</td>
+                          <td>${cliente.cpf}</td>
                           <td class="sorting_1">${cliente.name}</td>
                           <td>${cliente.email}</td>
                           <td>${cliente.dateBirth}</td>

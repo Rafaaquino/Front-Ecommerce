@@ -71,7 +71,7 @@ $(document).ready(function () {
                   <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
                     <div class="panel panel-red panel-widget ">
                       <div class="row no-padding"><i class="fas  fa-xl fa-dollar-sign color-teal"></i>
-                        <div class="large">${preco},00</div>
+                        <div class="large " >${preco},00</div>
                         <div class="text-muted">Receita</div>
                       </div>
                     </div>
@@ -91,6 +91,7 @@ $(document).ready(function () {
                           <tr>
                             <td>${relatorioUser.userModel.id}</td>
                             <td>${relatorioUser.userModel.name}</td>
+                            <td>${relatorioUser.products.length}</td>
                             <td>${relatorioUser.products[0].name}</td>
                             <td>#${relatorioUser.protocoll}</td>
                             <td>R$ ${relatorioUser.price},00</td>
