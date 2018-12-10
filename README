@@ -1,0 +1,33 @@
+Elaboração de E-commerce Front-End para trabalho de faculdade!
+
+Tecnologias Usadas:
+
+HTML
+CSS
+JavaScript
+Bootstrap
+Jquery
+Ajax
+JSON
+
+LOJA:
+Manipulação de JSON
+Carrinho de compras
+Checkout
+LocalStorage
+login
+Cadastro de cliente
+Endereço de entrega com ViaCep
+
+DASHBOARD:
+Manipulação de JSON
+LocalStorage
+Cadastro de Usuario
+Relatório de vendas, pedidos, clientes e receita
+Controle de produtos
+Controle de clientes
+
+
+Links para teste:
+http://webaquino.com.br/apparel/
+http://webaquino.com.br/apparel/Dashboard/
